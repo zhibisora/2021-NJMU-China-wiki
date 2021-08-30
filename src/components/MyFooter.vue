@@ -2,7 +2,7 @@
     <!-- 页脚开始 -->
     <footer>
         <p>Thanks to our sponsors!</p>
-        <ul>
+        <transition-group tag="ul" appear>
             <li>
                 <a href="http://www.njmu.edu.cn/" target="_blank">
                     <img src="/images/T--NJMU-China--njmu.gif" />
@@ -29,11 +29,6 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.snapgene.com/" target="_blank">
-                    <img src="/images/T--NJMU-China--snap.png" />
-                </a>
-            </li>
-            <li>
                 <a href="https://www.genscript.com/" target="_blank">
                     <img src="/images/T--NJMU-China--genscript.png" />
                 </a>
@@ -43,12 +38,50 @@
                     <img src="/images/T--NJMU-China--matlab.png" />
                 </a>
             </li>
-        </ul>
+        </transition-group>
     </footer>
     <!-- 页脚结束 -->
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+let imgs = $ref([
+    "/images/T--NJMU-China--genscript.png",
+    "/images/T--NJMU-China--shengrenyi.png",
+    "/images/T--NJMU-China--bmei.png",
+    "/images/T--NJMU-China--public.png",
+    "/images/T--NJMU-China--bms.png",
+    "/images/T--NJMU-China--njmu.gif",
+    "/images/T--NJMU-China--matlab.png",
+])
+let links = $ref([
+    "http://www.jsph.org.cn/",
+    "https://www.genscript.com/",
+    "https://www.mathworks.com/",
+])
+// 预加载实验失败
+// import { onMounted } from 'vue'
+// onMounted(() => {
+//     let count = 0
+//     let imgs = [
+//         "/images/T--NJMU-China--matlab.png",
+//         "/images/T--NJMU-China--genscript.png",
+//         "/images/T--NJMU-China--snap.png",
+//         "/images/T--NJMU-China--shengrenyi.png",
+//         "/images/T--NJMU-China--bmei.png",
+//         "/images/T--NJMU-China--public.png",
+//         "/images/T--NJMU-China--bms.png",
+//         "/images/T--NJMU-China--njmu.gif"
+//     ]
+//     for (let img of imgs) {
+//         let image = new Image()
+//         image.src = img
+//         image.onload = () => {
+//             count++
+//             console.log(count)
+//         }
+//     }
+// })
+</script>
 
 <style scoped>
 /* 初始化元素 */
@@ -61,6 +94,10 @@
 li {
     list-style-type: none;
 }
+/* li:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+} */
 
 a {
     text-decoration: none;
@@ -84,7 +121,7 @@ img {
 /* 页脚开始 */
 footer {
     position: relative;
-    padding: 100px;
+    padding: 90px;
     text-align: center;
 }
 
@@ -97,7 +134,7 @@ footer p {
 }
 
 footer ul {
-    padding: 0 100px;
+    padding: 0 90px;
 }
 
 footer li {

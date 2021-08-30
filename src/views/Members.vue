@@ -1,5 +1,4 @@
 <template>
-    <MyNav></MyNav>
     <div class="init">
         <Member2 :title-array="titleArray" :article-array="articleArray" :src-array="srcArray"></Member2>
     </div>
@@ -8,7 +7,6 @@
 
 <script lang="ts" setup>
 import MyFooter from "../components/MyFooter.vue"
-import MyNav from "../components/MyNav.vue"
 import Member2 from "../components/Member2.vue"
 
 // Wiki & Art
