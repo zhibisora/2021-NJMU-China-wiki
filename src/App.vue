@@ -1,11 +1,13 @@
 <template class="font-sans selection:bg-gray-400">
+  <MyNav></MyNav>
   <div class="font-sans selection:bg-gray-400">
-    <Modeling></Modeling>
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Modeling from './views/Modeling.vue'
+import MyNav from './components/MyNav.vue'
+import MyFooter from './components/MyFooter.vue'
 </script>
 
 <style>

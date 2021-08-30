@@ -1,5 +1,4 @@
 <template>
-    <MyNav></MyNav>
     <div class="Modeling bg-[#5BBDFE] relative font-sans selection:bg-gray-400">
         <div
             class="sidebar fixed w-1/6 h-[calc(100vh-75px)] text-left"
@@ -274,9 +273,8 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from '@vue/runtime-core'
+import { onMounted } from 'vue'
 import MyFooter from "../components/MyFooter.vue"
-import MyNav from "../components/MyNav.vue"
 
 var as: NodeListOf<HTMLAnchorElement> = null!
 var anchors: NodeListOf<HTMLAnchorElement> = null!

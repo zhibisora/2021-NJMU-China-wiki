@@ -28,6 +28,7 @@
             </li>
             <li>
                 <div>
+                    <router-link to="/Modeling">Summary</router-link>
                     <a href="#">Summary</a>
                     <a href="#">M1</a>
                     <a href="#">M2</a>
