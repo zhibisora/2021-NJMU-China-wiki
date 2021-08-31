@@ -7,7 +7,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@vue/runtime-core": "^3.2.6",
     "gsap": "^3.7.1",
     "vue": "^3.2.6",
     "vue-router": "4"
