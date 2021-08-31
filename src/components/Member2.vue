@@ -83,7 +83,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from '@vue/runtime-core'
+import { onMounted } from 'vue'
 
 const props = defineProps({
     titleArray: {

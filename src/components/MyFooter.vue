@@ -2,40 +2,10 @@
     <!-- 页脚开始 -->
     <footer>
         <p>Thanks to our sponsors!</p>
-        <transition-group tag="ul" appear>
-            <li>
-                <a href="http://www.njmu.edu.cn/" target="_blank">
-                    <img src="/images/T--NJMU-China--njmu.gif" />
-                </a>
-            </li>
-            <li>
-                <a href="http://jcyxy.njmu.edu.cn/" target="_blank">
-                    <img src="/images/T--NJMU-China--bms.png" />
-                </a>
-            </li>
-            <li>
-                <a href="http://gwxy.njmu.edu.cn/" target="_blank">
-                    <img src="/images/T--NJMU-China--public.png" />
-                </a>
-            </li>
-            <li>
-                <a href="http://bmei.njmu.edu.cn/" target="_blank">
-                    <img src="/images/T--NJMU-China--bmei.png" />
-                </a>
-            </li>
-            <li>
-                <a href="http://www.jsph.org.cn/" target="_blank">
-                    <img src="/images/T--NJMU-China--shengrenyi.png" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.genscript.com/" target="_blank">
-                    <img src="/images/T--NJMU-China--genscript.png" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.mathworks.com/" target="_blank">
-                    <img src="/images/T--NJMU-China--matlab.png" />
+        <transition-group tag="ul" @beforeEnter="be" @enter="e">
+            <li v-for="(link, i) in links" v-if="isShow" :key="link" :data-i="i">
+                <a :href="link" target="_blank">
+                    <img :src="imgs[i]" />
                 </a>
             </li>
         </transition-group>
@@ -44,43 +14,57 @@
 </template>
 
 <script lang="ts" setup>
-let imgs = $ref([
-    "/images/T--NJMU-China--genscript.png",
-    "/images/T--NJMU-China--shengrenyi.png",
-    "/images/T--NJMU-China--bmei.png",
-    "/images/T--NJMU-China--public.png",
-    "/images/T--NJMU-China--bms.png",
+import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
+let imgs = ref([
     "/images/T--NJMU-China--njmu.gif",
+    "/images/T--NJMU-China--bms.png",
+    "/images/T--NJMU-China--public.png",
+    "/images/T--NJMU-China--bmei.png",
+    "/images/T--NJMU-China--shengrenyi.png",
+    "/images/T--NJMU-China--genscript.png",
     "/images/T--NJMU-China--matlab.png",
 ])
-let links = $ref([
+// 注意 links 里面的内容必须和图片代表的内容一一对应(同一个sponsor的图片和链接在数组里的索引应该是一致的，这样才能保证在读取link的索引来查找对应的img的时候找到正确的对应的图片)
+let links = ref([
+    "http://www.njmu.edu.cn/",
+    "http://jcyxy.njmu.edu.cn/",
+    "http://gwxy.njmu.edu.cn/",
+    "http://bmei.njmu.edu.cn/",
     "http://www.jsph.org.cn/",
     "https://www.genscript.com/",
     "https://www.mathworks.com/",
 ])
-// 预加载实验失败
-// import { onMounted } from 'vue'
-// onMounted(() => {
-//     let count = 0
-//     let imgs = [
-//         "/images/T--NJMU-China--matlab.png",
-//         "/images/T--NJMU-China--genscript.png",
-//         "/images/T--NJMU-China--snap.png",
-//         "/images/T--NJMU-China--shengrenyi.png",
-//         "/images/T--NJMU-China--bmei.png",
-//         "/images/T--NJMU-China--public.png",
-//         "/images/T--NJMU-China--bms.png",
-//         "/images/T--NJMU-China--njmu.gif"
-//     ]
-//     for (let img of imgs) {
-//         let image = new Image()
-//         image.src = img
-//         image.onload = () => {
-//             count++
-//             console.log(count)
-//         }
-//     }
-// })
+
+let isShow = ref(false)
+var footer: HTMLElement = null!
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+    footer = document.querySelector('footer')!
+})
+let handleScroll = () => {
+    let footerToScreenTopDistance = footer.offsetTop - document.documentElement.scrollTop
+    if (footerToScreenTopDistance < window.innerHeight) {
+        isShow.value = true
+    }
+    // console.log(footerToScreenTopDistance)
+    // console.log(window.innerHeight)
+    // console.log(isShow.value)
+}
+let be = (el: Element) => {
+    let li = el as HTMLLIElement
+    li.style.opacity = '0'
+    li.style.transform = 'translateY(20px)'
+}
+let e = (el: Element) => {
+    let li = el as HTMLLIElement
+    gsap.to(li, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: li.dataset.i as unknown as number * 0.2
+    })
+}
 </script>
 
 <style scoped>
@@ -135,6 +119,11 @@ footer p {
 
 footer ul {
     padding: 0 90px;
+    /* min-height 由所有图片渲染完成后得出，目的是为了保证在没有渲染图片的时候footer的高度不影响其他的一些布局或者效果 */
+    /* 同时也保证了直接滚动到最后的时候，不会因为之前没有渲染出来而卡在进度条之前的底端的部位，也保证了未渲染时进度条不会有太大的变化 */
+    /* 这对于制作自制的进度条是很有帮助的，不会出现突然缩短的bug */
+    /* 如果修改了图片或其它影响ul高度的东西，请及时修改这一条css属性，保证其他效果或程序(代码块)的兼容性 */
+    min-height: 214px;
 }
 
 footer li {
