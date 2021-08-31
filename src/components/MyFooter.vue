@@ -64,7 +64,7 @@ let e = (el: Element) => {
         opacity: 1,
         y: 0,
         duration: 0.8,
-        delay: li.dataset.i as unknown as number * 0.2 + 0.9
+        delay: li.dataset.i as unknown as number * 0.2
     })
 }
 let pe = (el: Element) => {
@@ -72,7 +72,7 @@ let pe = (el: Element) => {
     gsap.to(p, {
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.4,
     })
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
-    <div class="Modeling bg-[#5BBDFE] relative font-sans selection:bg-gray-400">
+    <div class="Modeling bg-[#2070a5] relative font-sans selection:bg-gray-400">
+        <!-- #5BBDFE -->
         <div
             class="sidebar fixed w-1/6 h-[calc(100vh-75px)] text-left"
             :class="{ isBottom: is_bottom }"
@@ -73,7 +74,7 @@
                 <span class="-rotate-90 block absolute top-8 left-[55%] -translate-x-1/2">TOP</span>
             </a>
         </div>
-        <article class="article bg-white w-5/6 relative left-[16.6667%] p-12 text-left pt-2">
+        <article class="article bg-white w-[77.5%] relative left-[16.6667%] p-12 text-left pt-2">
             <h2>
                 Data collection
                 <span id="Data-collection" class="anchor"></span>
