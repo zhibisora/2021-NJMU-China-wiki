@@ -1,7 +1,9 @@
 <template>
     <!-- 页脚开始 -->
     <footer>
-        <p>Thanks to our sponsors!</p>
+        <transition @beforeEnter="be" @enter="pe">
+            <p v-if="isShow">Thanks to our sponsors!</p>
+        </transition>
         <transition-group tag="ul" @beforeEnter="be" @enter="e">
             <li v-for="(link, i) in links" v-if="isShow" :key="link" :data-i="i">
                 <a :href="link" target="_blank">
@@ -61,8 +63,16 @@ let e = (el: Element) => {
     gsap.to(li, {
         opacity: 1,
         y: 0,
-        duration: 1,
-        delay: li.dataset.i as unknown as number * 0.2
+        duration: 0.8,
+        delay: li.dataset.i as unknown as number * 0.2 + 0.9
+    })
+}
+let pe = (el: Element) => {
+    let p = el as HTMLLIElement
+    gsap.to(p, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
     })
 }
 </script>
@@ -90,6 +100,8 @@ a {
 footer {
     background-color: rgb(151, 106, 106);
     /* background-color: rgb(201, 230, 245); */
+    /* 和ul一样，详见ul */
+    min-height: 501px;
 }
 
 html {
