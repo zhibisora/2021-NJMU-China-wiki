@@ -2,9 +2,9 @@
     <!-- 导航栏开始 -->
     <nav>
         <span>
-            <a href="index.html">
+            <router-link to="/">
                 <img src="/images/ico.jpg" />
-            </a>
+            </router-link>
         </span>
         <ul>
             <li>
@@ -28,10 +28,11 @@
             </li>
             <li>
                 <div>
-                    <router-link to="/Modeling">Summary</router-link>
-                    <a href="#">Summary</a>
-                    <a href="#">M1</a>
-                    <a href="#">M2</a>
+                    <router-link to="/Modeling">Data collection</router-link>
+                    <router-link to="/Modeling">Data analysis</router-link>
+                    <router-link to="/Modeling">Method</router-link>
+                    <router-link to="/Modeling">Introduction</router-link>
+                    <router-link to="/Modeling">Results</router-link>
                 </div>Modeling
             </li>
             <li>
@@ -44,7 +45,7 @@
             </li>
             <li>
                 <div>
-                    <a href="Members-demo.html">Members</a>
+                    <router-link to="/Members">Members</router-link>
                     <a href="#">Attributions</a>
                     <a href="#">Call(?)</a>
                 </div>Our Team
@@ -108,10 +109,15 @@ nav {
     width: 100vw;
     height: 75px;
     padding: 10px;
-    background-color: rgb(91, 189, 254);
+    background-color: #0f354ef3;
+    /* background-color: rgb(91, 189, 254); */
     /* border-bottom: 2px solid rgb(254, 213, 123); */
     box-shadow: 0px 2px 5px #555;
     z-index: 10;
+    transition: all 0.4s ease;
+}
+nav:hover {
+    background-color: #0f354e;
 }
 
 /* 设置导航栏中头像框样式 */
@@ -224,6 +230,7 @@ nav div a:hover {
 /* 使用zero占位，去除nav定位设置为fixed后的影响 */
 .zero {
     height: 75px;
+    background-color: #2070a5;
 }
 
 /* 导航栏结束 */
