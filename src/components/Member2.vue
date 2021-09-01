@@ -25,7 +25,7 @@
                             @before-leave="bl"
                             @leave="l"
                         >
-                            <div v-if="status[i]" class="w-full h-full">
+                            <div v-show="status[i]" class="w-full h-full">
                                 <div class="middle" :style="{ backgroundImage: srcs[i] }"></div>
                                 <!-- 考虑转变transform动画，把introduction这一段拿出来，用v-for重新渲染一下 -->
                                 <div

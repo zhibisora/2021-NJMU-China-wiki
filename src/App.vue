@@ -1,6 +1,6 @@
 <template class="font-sans selection:bg-gray-400">
   <transition name="mynav">
-    <div v-if="count">
+    <div v-show="count">
       <MyNav></MyNav>
     </div>
   </transition>
