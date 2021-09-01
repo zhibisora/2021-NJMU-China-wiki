@@ -375,4 +375,7 @@ p {
 .toWider2 {
     width: 70%;
 }
+.article {
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
 </style>
