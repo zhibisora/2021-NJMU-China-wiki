@@ -4,78 +4,44 @@
         <div class="bigdiv -first">
             <h1 class="title">Wiki & Art</h1>
             <div class="middlediv">
-                <img class="leftarrow" src="/images/Members/left-arrow.jpg" alt />
-                <img class="rightarrow" src="/images/Members/right-arrow.jpg" alt />
-                <div class="Carousel">
-                    <div
-                        @animationend="animStatus = 1"
-                        @click="changeAnim(1)"
-                        class="left"
-                        :class="{
-                            todisappear: status == 1,
-                            toappear: status == 2,
-                            tobig: status == 3,
-                            tosmall: status == 4,
-                            canHover: animStatus == 1
-                        }"
-                        :style="{ 'backgroundImage': srcArray[0] }"
-                    ></div>
-                    <div
-                        @click="changeAnim(2)"
-                        class="middle"
-                        :class="{
-                            tosmall: status == 1,
-                            todisappear: status == 2,
-                            toappear: status == 3,
-                            tobig: status == 4,
-                        }"
-                        :style="{ backgroundImage: srcArray[1] }"
-                    ></div>
-                    <div
-                        @click="changeAnim(3)"
-                        class="right"
-                        :class="{
-                            tobig: status == 1,
-                            tosmall: status == 2,
-                            todisappear: status == 3,
-                            toappear: status == 4,
-                        }"
-                        :style="{ backgroundImage: srcArray[2] }"
-                    ></div>
-                    <div
-                        @click="changeAnim(4)"
-                        class="invisible_"
-                        :class="{
-                            toappear: status == 1,
-                            tobig: status == 2,
-                            tosmall: status == 3,
-                            todisappear: status == 4,
-                        }"
-                    ></div>
-                    <div
-                        class="introduction"
-                        :class="{
-                            'text-appear': status == 2 || status == 4,
-                            'text-disappear': status == 1 || status == 3,
-                        }"
-                    >
-                        <h6>{{ titleArray[lazyStatus] }}</h6>
-                        <br />
-                        <p class="content" v-html="articleArray[lazyStatus]"></p>
+                <div>
+                    <div class="left z-10" @click="turnLeft">
+                        <span>&lt;</span>
                     </div>
-                    <div
-                        class="introduction2"
-                        :class="{
-                            'text-appear': status == 1 || status == 3,
-                            'text-disappear': status == 2 || status == 4,
-                        }"
-                    >
-                        <h6>{{ titleArray[lazyStatus] }}</h6>
-                        <br />
-                        <p class="content" v-html="articleArray[lazyStatus]"></p>
+                    <div class="right z-10" @click="turnRight">
+                        <span>&gt;</span>
                     </div>
                 </div>
-                <img src alt />
+                <ul class="Carousel w-full h-full">
+                    <li
+                        v-for="(title,i) in titles"
+                        :key="title"
+                        class="item w-full h-full absolute"
+                    >
+                        <transition
+                            @before-enter="be"
+                            @enter="e"
+                            @after-enter="ae"
+                            @before-leave="bl"
+                            @leave="l"
+                        >
+                            <div v-if="status[i]" class="w-full h-full">
+                                <div class="middle" :style="{ backgroundImage: srcs[i] }"></div>
+                                <!-- 考虑转变transform动画，把introduction这一段拿出来，用v-for重新渲染一下 -->
+                                <div
+                                    class="introduction"
+                                    @mouseenter="stop"
+                                    @mouseleave="initTimer"
+                                >
+                                    <h6>{{ title }}</h6>
+                                    <br />
+                                    <p class="content" v-html="articles[i]"></p>
+                                </div>
+                            </div>
+                        </transition>
+                    </li>
+                </ul>
+                <!-- <img src alt /> -->
             </div>
         </div>
     </div>
@@ -83,7 +49,8 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import gsap from 'gsap/all'
+import { onMounted, ref } from 'vue'
 
 const props = defineProps({
     titleArray: {
@@ -102,46 +69,104 @@ const props = defineProps({
         required: true,
     }
 })
+let titles = props.titleArray as string[]
+let articles = props.articleArray as string[]
+let srcs = props.srcArray as string[]
 
-let animStatus = $ref(0)
-let status = $ref(0)
-let lazyStatus = $ref(0)
-let changeAnim = (index: number) => {
-    console.log("click")
-
-    clearInterval(timer)
-    change(index)
-    timer = window.setInterval(() => {
-        change(0)
-    }, 2500)
+// 处理切换状态更新
+let status = ref([] as boolean[])
+let len = titles.length
+for (let i = 0; i < len; i++) {
+    status.value.push(false)
 }
-
-let change = (index: number) => {
-    // if (index == 1 && status == 1 || status == 4) {
-    //     status--
-    // } else {
-    //     status++
-    // }
-    animStatus = 0
-    status++
-    if (status > 4) {
-        status = 1
+let index = ref(0)
+status.value[0] = true
+var translateX = ''
+var x = 0
+let _turnLeft = () => {
+    translateX = 'translateX(-100px)'
+    x = 100
+    status.value[index.value] = false
+    if (index.value > 0) {
+        index.value -= 1
+    } else {
+        index.value = len - 1
     }
+    status.value[index.value] = true
 
-    let temp = status
-    window.setTimeout(() => {
-        console.log(temp)
-
-        lazyStatus = temp
-    }, 500)
 }
-
-var timer: number = null!
+let _turnRight = () => {
+    translateX = 'translateX(100px)'
+    x = -100
+    status.value[index.value] = false
+    if (index.value < len - 1) {
+        index.value += 1
+    } else {
+        index.value = 0
+    }
+    status.value[index.value] = true
+}
+// 处理动画
+let be = (el: Element) => {
+    let div = el as HTMLDivElement
+    div.style.opacity = '0'
+    div.style.transform = translateX
+}
+let e = (el: Element, done: () => void) => {
+    let div = el as HTMLDivElement
+    gsap.to(div, {
+        opacity: 1,
+        x: 0,
+        duration: 0.4,
+        delay: 0.4,
+        onComplete: done
+    })
+}
+let ae = (el: Element) => {
+    let div = el as HTMLDivElement
+    // 移除transfrom样式，保证z-index在切换后不被破坏(同时也保证了不在切换后自动添加relative定位，但是这里没有用到，这里使用父元素连续w-full, h-full解决了子元素突然定位到没有宽和高的该变换元素上，导致子元素百分比宽高时，突然失去高度和宽度，从而不显示在屏幕上)
+    div.style.transform = ""
+}
+let bl = (el: Element) => {
+    let div = el as HTMLDivElement
+    div.style.opacity = '1'
+    div.style.transform = 'translateX(0)'
+}
+let l = (el: Element, done: () => void) => {
+    let div = el as HTMLDivElement
+    gsap.to(div, {
+        opacity: 0,
+        x: x,
+        duration: 0.4,
+        onComplete: done
+    })
+}
+// 处理自动切换
+var timer = 0
 onMounted(() => {
-    timer = window.setInterval(() => {
-        change(0)
-    }, 2500)
+    initTimer()
 })
+let initTimer = () => {
+    timer = window.setInterval(() => {
+        _turnRight()
+    }, 3000)
+}
+let timerControl = (func?: () => void) => {
+    window.clearInterval(timer)
+    if (func !== undefined) {
+        func()
+        initTimer
+    }
+}
+let stop = () => {
+    timerControl()
+}
+let turnRight = () => {
+    timerControl(_turnRight)
+}
+let turnLeft = () => {
+    timerControl(_turnLeft)
+}
 </script>
 
 <style scoped>
@@ -172,268 +197,109 @@ onMounted(() => {
 
 .bigdiv .middlediv {
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #d2cbbf;
     height: calc(100% - 150px);
     border-radius: 50px;
     box-shadow: 1px 1px 5px #666 inset;
     overflow: hidden;
 }
-
-.bigdiv .middlediv .leftarrow {
+/* 按钮处理 */
+.left,
+.right {
     position: absolute;
-    width: 250px;
-    height: 250px;
-    left: 100px;
-    top: 50px;
-}
-
-.bigdiv .middlediv .rightarrow {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    right: 100px;
-    top: 50px;
-}
-
-.bigdiv .Carousel .left:hover,
-.bigdiv .Carousel .middle:hover,
-.bigdiv .Carousel .right:hover,
-.bigdiv .Carousel .invisible_:hover {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    color: #fff;
+    transition: all 0.4s ease;
     cursor: pointer;
+    box-shadow: 0 0 2px #666;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}
+.left span,
+.right span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.left:hover,
+.right:hover {
+    opacity: 1;
 }
 
-.bigdiv .Carousel .left,
-.bigdiv .Carousel .right {
-    width: 300px;
-    height: 200px;
-    box-shadow: 1px 1px 10px #666 inset;
-    border-radius: 20px;
-    overflow: hidden;
-    position: absolute;
-    top: 300px;
-}
+/* 列表处理 */
+/* .bigdiv .Carousel .middle:hover {
+    cursor: pointer;
+    transform: translate(-50%) scale(1.2);
+} */
 
 .bigdiv .Carousel .middle {
-    width: 450px;
-    height: 300px;
-    box-shadow: 1px 1px 10px #666 inset;
-    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    /* box-shadow: 1px 1px 10px #666 inset; */
+    border-radius: 50px;
     overflow: hidden;
     position: absolute;
-    top: 100px;
-}
-
-.bigdiv .Carousel .left {
-    background: url(/images/Members/照片/朱政扬.jpg);
-    background-size: 100% 100%;
-    left: 6.7%;
-}
-
-.bigdiv .Carousel .middle {
-    background: url(/images/Members/照片/袁玮煜.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    /* background-size: 100% 100%; */
     transform: translate(-50%);
     left: 50%;
+    /* transition: all 0.4s ease; */
+    transition: all 0.4s ease;
 }
-
-.bigdiv .Carousel .right {
-    background: url(/images/Members/照片/金晨曦.jpg);
-    background-size: 100% 100%;
-    left: calc(93.3% - 300px);
-}
-
-.bigdiv .Carousel .invisible_ {
-    background: url(/images/Members/照片/沈娜.jpg);
-    background-size: 100% 100%;
-    left: 100%;
-    width: 0;
-    height: 0;
-    box-shadow: 1px 1px 10px #666 inset;
-    border-radius: 0;
-    overflow: hidden;
+.Carousel::after {
+    content: "";
     position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 10px #666 inset;
+    border-radius: 50px;
 }
 
-.bigdiv .Carousel .introduction,
-.bigdiv .Carousel .introduction2 {
+/* .Carousel {
+    pointer-events: none;
+} */
+
+.bigdiv .Carousel .introduction {
+    /* pointer-events: auto; */
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0.6;
     position: absolute;
     transform: translate(-50%);
     left: 50%;
-    top: 450px;
-    font-family: "StarLight", "Microsoft YaHei";
+    bottom: 0;
     text-align: center;
-    width: 1200px;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.4s ease;
+    padding: 10px 0;
+}
+.bigdiv .Carousel .introduction:hover {
+    opacity: 0.8;
 }
 
-.bigdiv .introduction h6,
-.bigdiv .introduction2 h6 {
-    color: rgb(2, 123, 206);
+.bigdiv .introduction h6 {
+    color: rgb(158, 208, 241);
+    font-family: "StarLight";
     font-size: 30px;
 }
 
-.bigdiv .introduction p,
-.bigdiv .introduction2 p {
+.bigdiv .introduction p {
     font-family: "Microsoft YaHei";
     font-size: 24px;
     line-height: 1.5;
+    color: rgba(255, 255, 255, 1);
 }
-
-.bigdiv .Carousel .introduction2 {
-    opacity: 0;
-}
-
-.todisappear {
-    /* 名称 持续时间 曲线 延时 播放次数 是否反向 */
-    animation: todisappear 1s ease 0s 1 normal forwards;
-}
-
-.tosmall {
-    /* 名称 持续时间 曲线 延时 播放次数 是否反向 */
-    animation: tosmall 1s ease 0s 1 normal forwards;
-}
-
-.tobig {
-    /* 名称 持续时间 曲线 延时 播放次数 是否反向 */
-    animation: tobig 1s ease 0s 1 normal forwards;
-}
-
-.toappear {
-    /* 名称 持续时间 曲线 延时 播放次数 是否反向 */
-    animation: toappear 1s ease 0s 1 normal forwards;
-}
-
-/* .tobig.canHover:hover {
-    
-} */
-
-@keyframes todisappear {
-    from {
-        width: 300px;
-        height: 200px;
-        border-radius: 20px;
-        top: 300px;
-        transform: translate(0%);
-        left: 6.7%;
-        opacity: 0.9;
-    }
-
-    to {
-        width: 150px;
-        height: 100px;
-        border-radius: 10px;
-        top: 750px;
-        transform: translate(0%);
-        left: -200px;
-        opacity: 0;
-    }
-}
-
-@keyframes tosmall {
-    from {
-        left: 50%;
-        width: 450px;
-        height: 300px;
-        border-radius: 30px;
-        top: 100px;
-        transform: translate(-50%) scale(1.2);
-    }
-
-    to {
-        width: 300px;
-        height: 200px;
-        border-radius: 20px;
-        top: 300px;
-        transform: translate(0%);
-        left: 6.7%;
-        opacity: 0.9;
-    }
-}
-
-@keyframes tobig {
-    from {
-        width: 300px;
-        height: 200px;
-        border-radius: 20px;
-        top: 300px;
-        transform: translate(0%);
-        left: calc(93.3% - 300px);
-        opacity: 0.9;
-    }
-
-    to {
-        left: 50%;
-        width: 450px;
-        /* width: 600px; */
-        height: 300px;
-        /* height: 400px; */
-        border-radius: 30px;
-        top: 100px;
-        /* top: 50px; */
-        transform: translate(-50%) scale(1.2);
-    }
-}
-
-@keyframes toappear {
-    from {
-        width: 150px;
-        height: 100px;
-        border-radius: 10px;
-        top: 750px;
-        transform: translate(0%);
-        left: calc(100% + 200px);
-        opacity: 0;
-    }
-
-    to {
-        width: 300px;
-        height: 200px;
-        border-radius: 20px;
-        top: 300px;
-        transform: translate(0%);
-        left: calc(93.3% - 300px);
-        opacity: 0.9;
-    }
-}
-
-.text-disappear {
-    /* 名称 持续时间 曲线 延时 播放次数 是否反向 */
-    animation: text-disappear 0.5s ease-in 0s 1 normal forwards;
-}
-
-.text-appear {
-    /* 名称 持续时间 曲线 延时 播放次数 是否反向 */
-    animation: text-appear 0.5s ease-out 0.5s 1 normal both;
-    z-index: 1;
-}
-
-@keyframes text-disappear {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes text-appear {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* .content {
-    white-space: pre-line;
-    display: inline-block;
-    font-size: 24px;
-    font-family: "Microsoft YaHei";
-    line-height: 32px;
-} */
-
 /* 第一区域(Members)结束 */
 </style>

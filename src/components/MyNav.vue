@@ -113,7 +113,7 @@ nav {
     /* background-color: rgb(91, 189, 254); */
     /* border-bottom: 2px solid rgb(254, 213, 123); */
     box-shadow: 0px 2px 5px #555;
-    z-index: 10;
+    z-index: 1000000;
     transition: all 0.4s ease;
 }
 nav:hover {
