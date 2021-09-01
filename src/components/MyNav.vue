@@ -9,8 +9,9 @@
         <ul>
             <li>
                 <div>
-                    <a href="#">Description</a>
-                    <a href="#">Design</a>
+                    <router-link to="/">Background</router-link>
+                    <!-- <a href="#">Description</a> -->
+                    <router-link to="/Design">Design</router-link>
                 </div>Project
             </li>
             <li>
@@ -52,8 +53,8 @@
             </li>
             <li>
                 <div>
-                    <a href="#">Judjing from</a>
-                </div>Judjing From
+                    <a href="#">Judging from</a>
+                </div>Judging From
             </li>
         </ul>
     </nav>
