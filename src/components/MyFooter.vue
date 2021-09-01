@@ -19,13 +19,13 @@
 import { onMounted, ref } from 'vue'
 import { gsap } from 'gsap'
 let imgs = ref([
-    "/images/T--NJMU-China--njmu.gif",
-    "/images/T--NJMU-China--bms.png",
-    "/images/T--NJMU-China--public.png",
-    "/images/T--NJMU-China--bmei.png",
-    "/images/T--NJMU-China--shengrenyi.png",
-    "/images/T--NJMU-China--genscript.png",
-    "/images/T--NJMU-China--matlab.png",
+    "/Team:NJMU-China/images/T--NJMU-China--njmu.gif",
+    "/Team:NJMU-China/images/T--NJMU-China--bms.png",
+    "/Team:NJMU-China/images/T--NJMU-China--public.png",
+    "/Team:NJMU-China/images/T--NJMU-China--bmei.png",
+    "/Team:NJMU-China/images/T--NJMU-China--shengrenyi.png",
+    "/Team:NJMU-China/images/T--NJMU-China--genscript.png",
+    "/Team:NJMU-China/images/T--NJMU-China--matlab.png",
 ])
 // 注意 links 里面的内容必须和图片代表的内容一一对应(同一个sponsor的图片和链接在数组里的索引应该是一致的，这样才能保证在读取link的索引来查找对应的img的时候找到正确的对应的图片)
 let links = ref([
