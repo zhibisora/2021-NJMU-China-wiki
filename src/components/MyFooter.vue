@@ -2,10 +2,10 @@
     <!-- 页脚开始 -->
     <footer>
         <transition @beforeEnter="be" @enter="pe">
-            <p v-if="isShow">Thanks to our sponsors!</p>
+            <p v-show="isShow">Thanks to our sponsors!</p>
         </transition>
         <transition-group tag="ul" @beforeEnter="be" @enter="e">
-            <li v-for="(link, i) in links" v-if="isShow" :key="link" :data-i="i">
+            <li v-for="(link, i) in links" v-show="isShow" :key="link" :data-i="i">
                 <a :href="link" target="_blank">
                     <img :src="imgs[i]" />
                 </a>
