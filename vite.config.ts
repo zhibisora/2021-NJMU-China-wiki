@@ -6,9 +6,7 @@ export default defineConfig({
   base: "/Team:NJMU-China/",
   plugins: [
     vue({
-      script: {
-        refSugar: true
-      }
+      refTransform: true
     })
   ]
 })

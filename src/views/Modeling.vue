@@ -274,7 +274,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import MyFooter from "../components/MyFooter.vue"
 
 var as: NodeListOf<HTMLAnchorElement> = null!
@@ -284,7 +284,7 @@ onMounted(() => {
     as = document.querySelectorAll('a')
     anchors = document.querySelectorAll('.anchor')
 })
-let is_bottom = $ref(false)
+let is_bottom = ref(false)
 let handleScroll = () => {
     let footerOffsetTop = document.querySelector('footer')!.offsetTop
     // console.log(footerOffsetTop)
@@ -297,14 +297,14 @@ let handleScroll = () => {
 
 
     if (scrollTop + winHeight > footerOffsetTop) {
-        is_bottom = true
+        is_bottom.value = true
     } else {
-        is_bottom = false
+        is_bottom.value = false
     }
 
     handleInRangeStatus(scrollTop)
 }
-let inRangeStatus = $ref(-1)
+let inRangeStatus = ref(-1)
 let handleInRangeStatus = (scrollTop: number) => {
     scrollTop -= 67
     for (let i = 0; i < 9; i++) {
@@ -313,14 +313,14 @@ let handleInRangeStatus = (scrollTop: number) => {
         // console.log(anchors[1].offsetTop)
 
         if (scrollTop > anchors[i].offsetTop && scrollTop < anchors[i + 1].offsetTop) {
-            inRangeStatus = i
+            inRangeStatus.value = i
         }
     }
     if (scrollTop > anchors[9].offsetTop) {
-        inRangeStatus = 9
+        inRangeStatus.value = 9
     }
     if (scrollTop < anchors[0].offsetTop) {
-        inRangeStatus = -1
+        inRangeStatus.value = -1
     }
 }
 </script>
