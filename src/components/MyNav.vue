@@ -2,14 +2,14 @@
     <!-- 导航栏开始 -->
     <nav>
         <span>
-            <a href="/Team:NJMU-China/">
+            <a href="https://2021.igem.org/Team:NJMU-China">
                 <img src="/images/ico.jpg" />
             </a>
         </span>
         <ul>
             <li>
                 <div>
-                    <a href="/Team:NJMU-China/">Background</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China">Background</a>
                     <!-- <a href="#">Description</a> -->
                     <a href="#">Design</a>
                 </div>Project
@@ -29,7 +29,7 @@
             </li>
             <li>
                 <div>
-                    <a href="/Team:NJMU-China/Modeling/">Data collection</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Modeling">Data collection</a>
                     <a href="#">Data analysis</a>
                     <a href="#">Method</a>
                     <a href="#">Introduction</a>
@@ -46,7 +46,7 @@
             </li>
             <li>
                 <div>
-                    <a href="/Team:NJMU-China/Members/">Members</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Members">Members</a>
                     <a href="#">Attributions</a>
                     <a href="#">Call(?)</a>
                 </div>Our Team
@@ -69,7 +69,7 @@
 <style scoped>
 @font-face {
     font-family: "StarLight";
-    src: url("/fonts/StarLight.ttf");
+    src: url("https://2021.igem.org/wiki/images/f/fd/T--NJMU-China--StarLight.ttf");
 }
 
 /* 初始化元素 */
