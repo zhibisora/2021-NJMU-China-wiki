@@ -1,11 +1,11 @@
 <template class="font-sans selection:bg-gray-400">
   <div class="font-sans selection:bg-gray-400">
-    <Home></Home>
+    <Modeling></Modeling>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Home from './views/Home.vue'
+import Modeling from '../src/views/Modeling.vue'
 </script>
 
 <style>

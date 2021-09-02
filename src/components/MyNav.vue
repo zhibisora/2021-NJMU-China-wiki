@@ -2,16 +2,16 @@
     <!-- 导航栏开始 -->
     <nav>
         <span>
-            <router-link to="/">
+            <a href="/Team:NJMU-China/">
                 <img src="/images/ico.jpg" />
-            </router-link>
+            </a>
         </span>
         <ul>
             <li>
                 <div>
-                    <router-link to="/">Background</router-link>
+                    <a href="/Team:NJMU-China/">Background</a>
                     <!-- <a href="#">Description</a> -->
-                    <router-link to="/Design">Design</router-link>
+                    <a href="#">Design</a>
                 </div>Project
             </li>
             <li>
@@ -29,11 +29,11 @@
             </li>
             <li>
                 <div>
-                    <router-link to="/Modeling">Data collection</router-link>
-                    <router-link to="/Modeling">Data analysis</router-link>
-                    <router-link to="/Modeling">Method</router-link>
-                    <router-link to="/Modeling">Introduction</router-link>
-                    <router-link to="/Modeling">Results</router-link>
+                    <a href="/Team:NJMU-China/Modeling/">Data collection</a>
+                    <a href="#">Data analysis</a>
+                    <a href="#">Method</a>
+                    <a href="#">Introduction</a>
+                    <a href="#">Results</a>
                 </div>Modeling
             </li>
             <li>
@@ -46,7 +46,7 @@
             </li>
             <li>
                 <div>
-                    <router-link to="/Members">Members</router-link>
+                    <a href="/Team:NJMU-China/Members/">Members</a>
                     <a href="#">Attributions</a>
                     <a href="#">Call(?)</a>
                 </div>Our Team

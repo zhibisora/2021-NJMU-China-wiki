@@ -1,4 +1,9 @@
 <template>
+    <transition name="mynav">
+        <div v-show="count">
+            <MyNav></MyNav>
+        </div>
+    </transition>
     <div class="body bg-[#2070a5]">
         <section class="sect portrait:bg-white" :style="{ opacity: value }">
             <!-- 视频播放完毕回调待稳定后可以搞一下 -->
@@ -39,24 +44,15 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref } from 'vue'
-import { useStore } from '../store'
+import MyNav from '../components/MyNav.vue'
+import { onMounted, ref } from 'vue'
 import MyFooter from '../components/MyFooter.vue'
 
-const store = useStore()
-store.commit('initCount')
 onMounted(() => {
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('scroll', navHidden)
-    // 防止页面切换之后再切换回来需要滚动一下才能触发状态的修改
-    // 我们这边一旦调用切换到该页面立刻调用一次判断状态的函数，保证组件状态的正确
-    navHidden()
-    handleScroll()
 })
-onUnmounted(() => {
-    window.removeEventListener('scroll', navHidden)
-    store.commit('changeCountToOne')
-})
+// 处理滚动淡入淡出效果
 let value = ref(1)
 let value2 = ref(0)
 let value3 = ref(0)
@@ -79,13 +75,15 @@ let handleScroll = () => {
     value4.value = 0 + (window.scrollY - height * 5) / 300
     value5.value = 0 + (window.scrollY - height * 7) / 300
 }
+// 处理nav的显示与消失
+let count = ref(0)
 let navHidden = () => {
     if (window.scrollY > window.innerHeight * 0.8) {
-        store.commit('changeCountToOne')
+        count.value = 1
     } else {
-        store.commit('initCount')
+        count.value = 0
     }
-    console.log(store.state.count)
+    console.log(count.value)
 }
 </script>
 
@@ -120,5 +118,14 @@ let navHidden = () => {
 }
 .text {
     display: inline-block;
+}
+/* MyNav transition */
+.mynav-enter-from,
+.mynav-leave-to {
+    opacity: 0;
+}
+.mynav-enter-active,
+.mynav-leave-active {
+    transition: all 0.4s ease;
 }
 </style>
