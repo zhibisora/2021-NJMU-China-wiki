@@ -54,8 +54,8 @@ let articleArray2 = ref([
     // "",
 ])
 let srcArray2 = ref([
-    "url(/Team:NJMU-China/images/Members/照片/姜璇玮.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/王沁雯.jpg)",
+    "url(https://2021.igem.org/wiki/images/8/89/T--NJMU-China--姜璇玮.jpg)",
+    "url(https://2021.igem.org/wiki/images/b/bc/T--NJMU-China--王沁雯.jpg)",
     // "url(/Team:NJMU-China/images/Members/照片/王舒宇.jpg)",
 ])
 
@@ -78,12 +78,12 @@ let articleArray3 = ref([
     "Yu Peng, a student of basic medicine from NJMU, join in iGEM as a member of the experimental group. Being a cranky/sentimental/innocent person, I hope to use my hard work, patience and courage to do something vital.",
 ])
 let srcArray3 = ref([
-    "url(/Team:NJMU-China/images/Members/照片/倪绍洋.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/张晓.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/范启涵.jpg)",
+    "url(https://2021.igem.org/wiki/images/9/97/T--NJMU-China--倪绍洋.jpg)",
+    "url(https://2021.igem.org/wiki/images/1/1e/T--NJMU-China--张晓.jpg)",
+    "url(https://2021.igem.org/wiki/images/4/47/T--NJMU-China--范启涵.jpg)",
     // "url(/Team:NJMU-China/images/Members/照片/Xiaoyu Yin.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/顾一凡.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/彭煜.jpg)",
+    "url(https://2021.igem.org/wiki/images/5/50/T--NJMU-China--顾一凡.jpg)",
+    "url(https://2021.igem.org/wiki/images/5/5c/T--NJMU-China--彭煜.jpg)",
 ])
 
 
@@ -101,10 +101,10 @@ let articleArray4 = ref([
     "I am Yinxi Zhu from Nanjing Medical University. A junior student major in Basic Medicine. Full of curiosity about the mysteries of life. So glad to be iGEMer and participate in the project which can change the world.",
 ])
 let srcArray4 = ref([
-    "url(/Team:NJMU-China/images/Members/照片/邹仲宇.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/马轶成.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/王鹏程.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/朱迎禧.jpg)",
+    "url(https://2021.igem.org/wiki/images/1/12/T--NJMU-China--邹仲宇.jpg)",
+    "url(https://2021.igem.org/wiki/images/9/98/T--NJMU-China--马轶成.jpg)",
+    "url(https://2021.igem.org/wiki/images/6/6b/T--NJMU-China--王鹏程.jpg)",
+    "url(https://2021.igem.org/wiki/images/1/1b/T--NJMU-China--朱迎禧.jpg)",
 ])
 
 
@@ -122,10 +122,10 @@ let articleArray5 = ref([
     "Hello!hello!I am Yanqing Yan, major in basic medicine and HP group. I like to think about all kinds of strange questions. I am new here and looking forward to making more friends.",
 ])
 let srcArray5 = ref([
-    "url(/Team:NJMU-China/images/Members/照片/蒋枫.jpg)",
+    "url(https://2021.igem.org/wiki/images/1/1a/T--NJMU-China--蒋枫.jpg)",
     // "url(/Team:NJMU-China/images/Members/照片/花含笑.jpg)",
     // "url(/Team:NJMU-China/images/Members/照片/宁子迪.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/严彦青.jpg)",
+    "url(https://2021.igem.org/wiki/images/e/ec/T--NJMU-China--严彦青.jpg)",
 ])
 
 
@@ -143,10 +143,10 @@ let articleArray6 = ref([
     'I am Zhu Zhengyang,<br />studying forensic medicine at the School of<br />Basic Medical Sciences, Nanjing Medical University.<br />Currently working as an artist in the web team,<br />participating in the production of games,<br />writing lyrics and arranging music.'
 ])
 let srcArray6 = ref([
-    "url(/Team:NJMU-China/images/Members/照片/袁玮煜.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/金晨曦.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/沈娜.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/朱政扬.jpg)",
+    "url(https://2021.igem.org/wiki/images/b/bf/T--NJMU-China--袁玮煜.jpg)",
+    "url(https://2021.igem.org/wiki/images/1/11/T--NJMU-China--金晨曦.jpg)",
+    "url(https://2021.igem.org/wiki/images/b/b5/T--NJMU-China--沈娜.jpg)",
+    "url(https://2021.igem.org/wiki/images/9/92/T--NJMU-China--朱政扬.jpg)",
 ])
 
 
@@ -167,10 +167,10 @@ let articleArray7 = ref([
 ])
 let srcArray7 = ref([
     // "url(/Team:NJMU-China/images/Members/照片/Yongkai Yu.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/季佳妮.jpg)",
+    "url(https://2021.igem.org/wiki/images/c/c8/T--NJMU-China--季佳妮.jpg)",
     // "url(/Team:NJMU-China/images/Members/照片/Yuhang Yang.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/王信元.jpg)",
-    "url(/Team:NJMU-China/images/Members/照片/杨千月.jpg)",
+    "url(https://2021.igem.org/wiki/images/3/35/T--NJMU-China--王信元.jpg)",
+    "url(https://2021.igem.org/wiki/images/a/a4/T--NJMU-China--杨千月.jpg)",
 ])
 </script>
 
