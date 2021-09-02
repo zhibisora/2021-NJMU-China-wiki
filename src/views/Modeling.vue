@@ -1,4 +1,5 @@
 <template>
+    <MyNav></MyNav>
     <div class="Modeling bg-[#2070a5] relative font-sans selection:bg-gray-400">
         <!-- #5BBDFE -->
         <div
@@ -276,6 +277,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 import MyFooter from "../components/MyFooter.vue"
+import MyNav from "../components/MyNav.vue"
 
 var as: NodeListOf<HTMLAnchorElement> = null!
 var anchors: NodeListOf<HTMLAnchorElement> = null!

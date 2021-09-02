@@ -1,4 +1,5 @@
 <template>
+    <MyNav></MyNav>
     <div class="init">
         <Member2 :title-array="titleArray1" :article-array="articleArray1" :src-array="srcArray1"></Member2>
         <Member2 :title-array="titleArray2" :article-array="articleArray2" :src-array="srcArray2"></Member2>
@@ -13,6 +14,7 @@
 
 <script lang="ts" setup>
 import MyFooter from "../components/MyFooter.vue"
+import MyNav from "../components/MyNav.vue"
 import Member2 from "../components/Member2.vue"
 import { ref } from 'vue'
 
