@@ -8,7 +8,7 @@
         <section class="sect portrait:bg-white" :style="{ opacity: value }">
             <!-- 视频播放完毕回调待稳定后可以搞一下 -->
             <video
-                src="https://2021.igem.org/wiki/images/6/6d/T--NJMU-China--story.mp4"
+                src="/videos/story.mp4"
                 autoplay
                 muted
                 class="portrait:object-contain landscape:object-cover portrait:scale-150"

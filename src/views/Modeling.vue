@@ -330,7 +330,7 @@ let handleInRangeStatus = (scrollTop: number) => {
 <style scoped>
 @font-face {
     font-family: "StarLight";
-    src: url("https://2021.igem.org/wiki/images/f/fd/T--NJMU-China--StarLight.ttf");
+    src: url("/fonts/StarLight.ttf");
 }
 .index {
     padding-left: 36px;
