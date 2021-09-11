@@ -15,30 +15,26 @@
             ></video>
         </section>
         <section class="sect2 text-left" :style="{ opacity: value2 }">
-            <!-- <h2 class="relative text-white text-5xl w-full leading-relaxed">AppleLikeScroll</h2> -->
-            <div class="div h-[60%] w-[60%] bg-white">ass</div>
-            <p
-                class="text relative text-white text-[1.2rem]"
-            >As a medical college, students in Nanjing Medical University often actively participate in voluntary activities such as the COVID-19 nucleic acid testing.</p>
+            <div class="grid gap-4 cell h-full">
+                <div class="letter bg-white rounded-2xl overflow-hidden">
+                    <div
+                        class="h-full absolute w-full bg-black rounded-2xl bg-cover"
+                        style="background-image: url('https://2021.igem.org/wiki/images/e/e5/T--NJMU-China--1.1.png')"
+                    ></div>
+                    <div
+                        class="h-full absolute w-full bg-black rounded-2xl bg-cover"
+                        style="background-image: url('https://2021.igem.org/wiki/images/a/af/T--NJMU-China--1.3.png')"
+                    ></div>
+                    <div
+                        class="h-full absolute w-full bg-black rounded-2xl bg-cover"
+                        style="background-image: url('https://2021.igem.org/wiki/images/9/9e/T--NJMU-China--1.2.png')"
+                    ></div>
+                </div>
+                <div
+                    class="letter"
+                >As a medical college, students in Nanjing Medical University often actively participate in voluntary activities such as the COVID-19 nucleic acid testing.</div>
+            </div>
         </section>
-        <!-- <section class="sect flex-col text-left" :style="{ opacity: value3 }">
-            <h2 class="relative text-white text-5xl w-full leading-relaxed">AppleLikeScroll</h2>
-            <p
-                class="relative text-white text-[1.2rem]"
-            >2. They present with varying degrees of dysfunctional communication and social skills, repetitive and stereotypic behaviors, and attention, cognitive, learning and sensory defects.[1]</p>
-        </section>
-        <section class="sect flex-col text-left" :style="{ opacity: value4 }">
-            <h2 class="relative text-white text-5xl w-full leading-relaxed">AppleLikeScroll</h2>
-            <p
-                class="relative text-white text-[1.2rem]"
-            >3. Autism is the fastest-growing developmental disability. According to American CDC, prevalence of autism in the U.S. has increased from 1 in 68 births in 2010 to 1 in 54 births in 2020. And in China the statistic is about 1 in 100 births.</p>
-        </section>
-        <section class="sect flex-col text-left" :style="{ opacity: value5 }">
-            <h2 class="relative text-white text-5xl w-full leading-relaxed">AppleLikeScroll</h2>
-            <p
-                class="relative text-white text-[1.2rem]"
-            >4. Although autism is a biological disorder, it is primarily treated through education and behavioral services, with medication as an important adjunct. However, to date, there is no effective drug to treat ASD.</p>
-        </section>-->
     </div>
     <MyFooter></MyFooter>
 </template>
@@ -118,13 +114,9 @@ let navHidden = () => {
 }
 /* 新样式 */
 .sect2 {
-    min-height: 80vh;
-    padding: 50px 100px;
+    height: 100vh;
+    padding: 150px 100px;
     position: relative;
-}
-.div {
-    position: relative;
-    display: inline-block;
 }
 /* 用于修复nav变化时层级在.sect2和.div之下的bug */
 .div,
@@ -132,9 +124,29 @@ let navHidden = () => {
     z-index: -1;
 }
 /* 修复结束 */
-.text {
-    display: inline-block;
+
+.letter {
+    /* background-color: #0069b3; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    color: white;
+    line-height: 1.5;
+    font-family: "Microsoft Yahei";
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+.cell {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+}
+/* 实验失败 可能child不支持和grid一起使用 */
+/* .cell:first-child {
+    background-color: #fff;
+/* }
 /* MyNav transition */
 .mynav-enter-from,
 .mynav-leave-to {
