@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #home_logo,
+        #sideMenu {
+            display: none;
+        }
+
+        #sideMenu,
+        #top_title,
+        .patrollink {
+            display: none;
+        }
+
+        #content {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: -7px;
+            padding: 0px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        /*body {background-image: url(https://2019.igem.org/wiki/images/7/72/T--Peking--background3.jpg); }*/
+        #bodyContent h1,
+        #bodyContent h2,
+        #bodyContent h3,
+        #bodyContent h4,
+        #bodyContent h5 {
+            margin-bottom: 0px;
+        }
+
+        #bodyContent a[href ^="https://"],
+        .link-https {
+            padding-right: 0px;
+        }
+
+        .judges-will-not-evaluate {
+            border: 4px solid #F42534;
+            padding: 2% !important;
+            width: 92% !important;
+        }
+
+        #globalWrapper {
+            padding: 0;
+        }
+
+        /* 针对tw的对于top menu的初始化 */
+        #top_menu_14 {
+            box-sizing: content-box;
+            line-height: normal;
+        }
+
+        #top_menu_14 * {
+            box-sizing: content-box;
+        }
+
+        #top_menu_14 img {
+            border: none;
+        }
+
+        /* 自己代码的初始化 */
+        #HQ_page p {
+            font-family: inherit;
+            text-align: inherit;
+        }
+
+        #HQ_page footer p {
+            font-size: 30px;
+        }
+
+        #HQ_page .sect2 p {
+            font-size: 1.2rem;
+        }
+
+        #app img {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // reset iGEM
+        if (RegExp('igem\\.org').test(window.location.href)) {
+            var ids = ['HQ_page', 'content', 'bodyContent', 'mw-content-text']
+            for (var i = 0; i < ids.length; i++)
+                document.querySelector('#' + ids[i]).removeAttribute('id');
+            var classes = ['mw-content-ltr']
+            for (var i = 0; i < classes.length; i++) {
+                var elements = document.querySelectorAll('.' + classes[i]);
+                for (var j = 0; j < elements.length; j++) {
+                    elements[j].classList.remove(classes[i]);
+                }
+            }
+            document.querySelectorAll('.mw-body')[0].removeAttribute('id')
+        }
+        //See if we're on the actual igem wiki page
+        if (RegExp('igem\\.org').test(window.location.href)) {
+            //change favicon if we are
+            const favicon = document.querySelector('[rel="shortcut icon"]');
+            favicon.href = "https://2021.igem.org/wiki/images/e/e2/T--NJMU-China--favicon.svg";
+        }
+    </script>
+</body>
+
+</html>

@@ -4,8 +4,10 @@ dist
 dist-ssr
 *.local
 test
+record
 bug记录.txt
 实验特性草稿记录.txt
 Story.vue
 关于多页面的探索.txt
 文件域名记录.js
+fileModifierGUI.exe

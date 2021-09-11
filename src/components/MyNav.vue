@@ -3,7 +3,7 @@
     <nav>
         <span>
             <a href="https://2021.igem.org/Team:NJMU-China">
-                <img src="/images/ico.jpg" />
+                <img src="https://2021.igem.org/wiki/images/f/ff/T--NJMU-China--ico.jpg" />
             </a>
         </span>
         <ul>

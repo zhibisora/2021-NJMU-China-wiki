@@ -1,6 +1,6 @@
 <template>
     <transition name="mynav">
-        <div v-show="count">
+        <div v-show="count" class="for-nav-deep">
             <MyNav></MyNav>
         </div>
     </transition>
@@ -88,6 +88,16 @@ let navHidden = () => {
 </script>
 
 <style scoped>
+/* 用于修复nav变化时层级在.sect2和.div之下的bug */
+/* 然而混合模式无法修复，导致依旧很奇怪 一劳永逸的解决办法就是不要让它在转变的时候就碰到文字 */
+/* 等把文字框的padding设置起来应该就可以删掉了，当然，保守起见，如果不碍事，造成很大麻烦的话，可以继续保留 */
+* {
+    z-index: -2;
+}
+.body {
+    position: relative;
+}
+/* 修复结束 下面还有一个修改.sect和.div的z-index值的 */
 .sect {
     position: relative;
     width: 100%;
@@ -116,6 +126,12 @@ let navHidden = () => {
     position: relative;
     display: inline-block;
 }
+/* 用于修复nav变化时层级在.sect2和.div之下的bug */
+.div,
+.sect2 {
+    z-index: -1;
+}
+/* 修复结束 */
 .text {
     display: inline-block;
 }
@@ -126,6 +142,12 @@ let navHidden = () => {
 }
 .mynav-enter-active,
 .mynav-leave-active {
-    transition: all 0.4s ease;
+    /* transition: all 0.4s ease; */
+    transition: all 0.2s ease-out;
+}
+/* 修改nav中.zero的占位样式，使得在nav快速消失时不出现透明占位延迟消失的bug */
+/* :deep()是新的深度选择器 */
+.for-nav-deep :deep(.zero) {
+    height: 0;
 }
 </style>
