@@ -1,13 +1,48 @@
 <template>
     <MyNav></MyNav>
     <div class="init">
-        <Member2 :title-array="titleArray1" :article-array="articleArray1" :src-array="srcArray1"></Member2>
-        <Member2 :title-array="titleArray2" :article-array="articleArray2" :src-array="srcArray2"></Member2>
-        <Member2 :title-array="titleArray3" :article-array="articleArray3" :src-array="srcArray3"></Member2>
-        <Member2 :title-array="titleArray4" :article-array="articleArray4" :src-array="srcArray4"></Member2>
-        <Member2 :title-array="titleArray5" :article-array="articleArray5" :src-array="srcArray5"></Member2>
-        <Member2 :title-array="titleArray6" :article-array="articleArray6" :src-array="srcArray6"></Member2>
-        <Member2 :title-array="titleArray7" :article-array="articleArray7" :src-array="srcArray7"></Member2>
+        <Member2
+            :title="title1"
+            :title-array="titleArray1"
+            :article-array="articleArray1"
+            :src-array="srcArray1"
+        ></Member2>
+        <Member2
+            :title="title2"
+            :title-array="titleArray2"
+            :article-array="articleArray2"
+            :src-array="srcArray2"
+        ></Member2>
+        <Member2
+            :title="title3"
+            :title-array="titleArray3"
+            :article-array="articleArray3"
+            :src-array="srcArray3"
+        ></Member2>
+        <Member2
+            :title="title4"
+            :title-array="titleArray4"
+            :article-array="articleArray4"
+            :src-array="srcArray4"
+        ></Member2>
+        <Member2
+            :title="title5"
+            :title-array="titleArray5"
+            :article-array="articleArray5"
+            :src-array="srcArray5"
+        ></Member2>
+        <Member2
+            :title="title6"
+            :title-array="titleArray6"
+            :article-array="articleArray6"
+            :src-array="srcArray6"
+        ></Member2>
+        <Member2
+            :title="title7"
+            :title-array="titleArray7"
+            :article-array="articleArray7"
+            :src-array="srcArray7"
+        ></Member2>
     </div>
     <MyFooter></MyFooter>
 </template>
@@ -19,6 +54,7 @@ import Member2 from "../components/Member2.vue"
 import { ref } from 'vue'
 
 // PI
+let title1 = "PI"
 let titleArray1 = ref([
     "Zhibin Hu",
     "Ran Huo",
@@ -43,6 +79,7 @@ let srcArray1 = ref([
 
 
 // Leaders
+let title2 = "Leaders"
 let titleArray2 = ref([
     "Xuanwei Jiang",
     "Qinwen Wang",
@@ -61,6 +98,7 @@ let srcArray2 = ref([
 
 
 // Lab
+let title3 = "Lab"
 let titleArray3 = ref([
     "Shaoyang Ni",
     "Xiao Zhang",
@@ -88,6 +126,7 @@ let srcArray3 = ref([
 
 
 // Models
+let title4 = "Models"
 let titleArray4 = ref([
     "Zhongyu Zou",
     "Yicheng Ma",
@@ -109,6 +148,7 @@ let srcArray4 = ref([
 
 
 // HP
+let title5 = "HP"
 let titleArray5 = ref([
     "Feng Jiang",
     "Hanxiao Hua",
@@ -130,6 +170,7 @@ let srcArray5 = ref([
 
 
 // Wiki & Art
+let title6 = "Wiki & Art"
 let titleArray6 = ref([
     "Weiyu Yuan",
     "Chengxi Jin",
@@ -151,6 +192,7 @@ let srcArray6 = ref([
 
 
 // Other members
+let title7 = "Other Members"
 let titleArray7 = ref([
     "Yongkai Yu",
     "Jiani Ji",

@@ -127,6 +127,7 @@ footer p {
     color: rgb(252, 179, 23);
     font-size: 30px;
     font-weight: 500;
+    cursor: default;
 }
 
 footer ul {

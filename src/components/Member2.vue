@@ -2,7 +2,7 @@
     <!-- 第一区域开始 -->
     <div class="first">
         <div class="bigdiv -first">
-            <h1 class="title">Wiki & Art</h1>
+            <h1 class="title">{{ title }}</h1>
             <div class="middlediv">
                 <div>
                     <div class="left z-10" @click="turnLeft">
@@ -67,11 +67,16 @@ const props = defineProps({
         default: [],
         type: Array,
         required: true,
+    },
+    title: {
+        type: String,
+        required: true,
     }
 })
 let titles = props.titleArray as string[]
 let articles = props.articleArray as string[]
 let srcs = props.srcArray as string[]
+let title = props.title
 
 // 处理切换状态更新
 let status = ref([] as boolean[])
