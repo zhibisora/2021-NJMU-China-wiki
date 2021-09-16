@@ -11,7 +11,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         Members: resolve(__dirname, 'Members/index.html'),
-        Modeling: resolve(__dirname, 'Modeling/index.html')
+        Modeling: resolve(__dirname, 'Modeling/index.html'),
+        // Design: resolve(__dirname, 'Design/index.html'),
       }
     }
   }

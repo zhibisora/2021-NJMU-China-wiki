@@ -16,25 +16,27 @@
                 ></video>
             </section>
             <section class="sect2 text-left" :style="{ opacity: value2 }">
-                <div class="grid gap-4 cell h-full">
+                <div class="grid gap-x-4 cell h-full">
                     <div class="letter bg-white rounded-2xl overflow-hidden box">
                         <div
-                            class="h-full absolute w-full rounded-2xl bg-cover"
-                            style="background-image: url('https://2021.igem.org/wiki/images/e/e5/T--NJMU-China--1.1.png')"
+                            class="h-full absolute w-full rounded-2xl bg-cover bg-center"
+                            style="background-image: url(https://2021.igem.org/wiki/images/e/e5/T--NJMU-China--1.1.png)"
                         ></div>
                         <div
                             class="h-full absolute w-full rounded-2xl bg-cover img2"
-                            style="background-image: url('https://2021.igem.org/wiki/images/a/af/T--NJMU-China--1.3.png')"
+                            style="background-image: url(https://2021.igem.org/wiki/images/a/af/T--NJMU-China--1.3.png)"
                         ></div>
                         <div
                             class="h-full absolute w-full rounded-2xl bg-cover img3"
-                            style="background-image: url('https://2021.igem.org/wiki/images/9/9e/T--NJMU-China--1.2.png')"
+                            style="background-image: url(https://2021.igem.org/wiki/images/9/9e/T--NJMU-China--1.2.png)"
                         ></div>
                     </div>
                     <div
                         class="letter"
                     >As a medical college, students in Nanjing Medical University often actively participate in voluntary activities such as the COVID-19 nucleic acid testing.</div>
                 </div>
+                <div></div>
+                <div></div>
             </section>
         </div>
         <MyFooter></MyFooter>
@@ -43,8 +45,12 @@
 
 <script lang="ts" setup>
 import MyNav from '../components/MyNav.vue'
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import MyFooter from '../components/MyFooter.vue'
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll)
@@ -104,6 +110,7 @@ let box: HTMLElement = null!
 let bigBody: HTMLElement = null!
 let sect2Img2: HTMLElement = null!
 let sect2Img3: HTMLElement = null!
+let sect2Letters: NodeListOf<HTMLElement> = null!
 onMounted(() => {
     window.addEventListener('scroll', sect2Scroll, { passive: false })
     sect2 = document.querySelector('.body')!
@@ -111,27 +118,33 @@ onMounted(() => {
     bigBody = document.querySelector('.bigBody')!
     sect2Img2 = document.querySelector('.img2')!
     sect2Img3 = document.querySelector('.img3')!
+    sect2Letters = document.querySelectorAll('.sect2 .letter')
+    sect2ImgChange(100 + box.clientWidth + 'px')
 })
 let sect2Scroll = (e: Event) => {
     let height = window.innerHeight / 2
 
     let elScroll = window.scrollY - height * 2
-    if (elScroll > 0 && elScroll < 4 * height) {
-        e.preventDefault()
+    if (elScroll > 0 && elScroll < 2 * height) {
+        // e.preventDefault()
 
-        bigBody.style.top = elScroll + 'px'
+        sect2Letters[0].style.transform = "translateY(" + elScroll + 'px' + ')'
+        sect2Letters[1].style.transform = "translateY(" + elScroll + 'px' + ')'
+        // bigBody.style.top = elScroll + 'px'
 
-        let Img2Scroll = 100 + box.clientWidth - elScroll
+        let Img2Scroll = 100 + box.clientWidth - 2 * elScroll
         if (!(Img2Scroll < -5)) {
-            sect2Img2.style.left = Img2Scroll + 'px'
-            sect2Img3.style.right = Img2Scroll + 'px'
+            sect2ImgChange(Img2Scroll + 'px')
         } else {
-            sect2Img2.style.left = '0px'
-            sect2Img3.style.right = '0px'
+            sect2ImgChange('0px')
         }
 
         console.log("233")
     }
+}
+let sect2ImgChange = (pos: string) => {
+    sect2Img2.style.left = pos
+    sect2Img3.style.right = pos
 }
 </script>
 
@@ -165,7 +178,7 @@ let sect2Scroll = (e: Event) => {
 }
 /* 新样式 */
 .sect2 {
-    height: 100vh;
+    height: 200vh;
     padding: 150px 100px;
     position: relative;
 }
@@ -181,17 +194,25 @@ let sect2Scroll = (e: Event) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 4vh;
     padding: 20px;
     color: white;
     line-height: 1.5;
     font-family: "Microsoft Yahei";
     cursor: default;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
 }
 .cell {
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 100%;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: 5fr 5fr;
+    row-gap: 200px;
+}
+@media screen and (orientation: portrait) {
+    .cell {
+        grid-template-columns: 100%;
+        grid-template-rows: 5fr 5fr 5fr 5fr;
+    }
 }
 /* 实验失败 可能child不支持和grid一起使用 */
 /* .cell:first-child {

@@ -93,6 +93,7 @@ let articleArray2 = ref([
 let srcArray2 = ref([
     "url(https://2021.igem.org/wiki/images/8/89/T--NJMU-China--姜璇玮.jpg)",
     "url(https://2021.igem.org/wiki/images/b/bc/T--NJMU-China--王沁雯.jpg)",
+    "",
     // "url(/Team:NJMU-China/images/Members/照片/王舒宇.jpg)",
 ])
 
@@ -119,6 +120,7 @@ let srcArray3 = ref([
     "url(https://2021.igem.org/wiki/images/9/97/T--NJMU-China--倪绍洋.jpg)",
     "url(https://2021.igem.org/wiki/images/1/1e/T--NJMU-China--张晓.jpg)",
     "url(https://2021.igem.org/wiki/images/4/47/T--NJMU-China--范启涵.jpg)",
+    "",
     // "url(/Team:NJMU-China/images/Members/照片/Xiaoyu Yin.jpg)",
     "url(https://2021.igem.org/wiki/images/5/50/T--NJMU-China--顾一凡.jpg)",
     "url(https://2021.igem.org/wiki/images/5/5c/T--NJMU-China--彭煜.jpg)",
@@ -163,6 +165,8 @@ let articleArray5 = ref([
 ])
 let srcArray5 = ref([
     "url(https://2021.igem.org/wiki/images/1/1a/T--NJMU-China--蒋枫.jpg)",
+    "",
+    "",
     // "url(/Team:NJMU-China/images/Members/照片/花含笑.jpg)",
     // "url(/Team:NJMU-China/images/Members/照片/宁子迪.jpg)",
     "url(https://2021.igem.org/wiki/images/e/ec/T--NJMU-China--严彦青.jpg)",
@@ -208,8 +212,10 @@ let articleArray7 = ref([
     'Rising sophomore. Majoring in pediatrics. Read, do chores, learn, love, make art, work out, pick up languages and play couple of traditional musical instruments unprofessionally. Thus unsurprisingly a quiet, boring book lover, a part-time housegirl-of-the-family, an sincere yet unsuccessful seeker of knowledge, an occasional romantic, a lazy sketcher, a weekend warrior, a multi-linguist and a music enthusiast. And a social phobic. "Diversity is essential to happiness..."',
 ])
 let srcArray7 = ref([
+    "",
     // "url(/Team:NJMU-China/images/Members/照片/Yongkai Yu.jpg)",
     "url(https://2021.igem.org/wiki/images/c/c8/T--NJMU-China--季佳妮.jpg)",
+    "",
     // "url(/Team:NJMU-China/images/Members/照片/Yuhang Yang.jpg)",
     "url(https://2021.igem.org/wiki/images/3/35/T--NJMU-China--王信元.jpg)",
     "url(https://2021.igem.org/wiki/images/a/a4/T--NJMU-China--杨千月.jpg)",

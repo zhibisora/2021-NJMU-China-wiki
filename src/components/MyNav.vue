@@ -159,10 +159,18 @@ nav li::after {
 } */
 
 /* 设置导航栏中各选项属性 */
+nav ul {
+    /* 定位 */
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
 nav li {
     /* 定位 */
     position: relative;
-    float: left;
     /* 大小形状颜色 */
     padding: 12px 19px;
     padding-right: 43px;
@@ -196,7 +204,7 @@ nav li:hover div {
 nav div {
     display: inline-block;
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 7px;
     /* max-width: 30px; */
     max-height: 30px;
@@ -210,7 +218,7 @@ nav div {
 @keyframes unfold {
     to {
         max-width: 160px;
-        max-height: 220px;
+        max-height: 300px;
     }
 }
 
