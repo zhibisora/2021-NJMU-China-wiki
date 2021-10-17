@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #loading,
+        #loading * {
+            box-sizing: border-box;
+        }
+
+        #loading {
+            /* top: -16px; */
+            z-index: 9999;
+            background-color: #fff;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #loading video {
+            height: 60vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="loading">
+        <video src="https://2021.igem.org/wiki/images/2/20/T--NJMU-China--loading.mp4" muted autoplay></video>
+    </section>
+    <script>
+        window.onload = () => {
+            let loadsect = document.querySelector('#loading')
+            loadsect.remove()
+        }
+    </script>
+</body>
+
+</html>

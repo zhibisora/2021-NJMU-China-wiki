@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gsap": "^3.7.1",
+    "scrollmagic": "^2.0.8",
     "vue": "^3.2.6"
   },
   "devDependencies": {

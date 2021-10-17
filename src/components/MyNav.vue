@@ -9,52 +9,85 @@
         <ul>
             <li>
                 <div>
-                    <a href="https://2021.igem.org/Team:NJMU-China">Background</a>
-                    <!-- <a href="#">Description</a> -->
-                    <a href="#">Design</a>
-                </div>Project
+                    <a href="https://2021.igem.org/Team:NJMU-China">Main</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China#Abstract">Abstract</a>
+                </div>HOME
             </li>
             <li>
                 <div>
-                    <a href="#">Experiment</a>
-                    <a href="#">Safety</a>
-                    <a href="#">Contribution</a>
-                </div>Laboratory
+                    <a href="https://2021.igem.org/Team:NJMU-China/Description">Description</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Design">Design</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Safety">Safety</a>
+                    <a
+                        href="https://2021.igem.org/Team:NJMU-China/Proof_Of_Concept"
+                    >Proof of concept</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Implementation">Implementation</a>
+                </div>PROJECT
             </li>
             <li>
                 <div>
-                    <a href="#">Parts Overview</a>
-                    <a href="#">Basic Part</a>
-                </div>Parts
+                    <a href="https://2021.igem.org/Team:NJMU-China/Results">Results</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Experiments">Experiment protocol</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Notebook">NoteBook</a>
+                </div>EXPERIMENTS
             </li>
             <li>
                 <div>
-                    <a href="https://2021.igem.org/Team:NJMU-China/Modeling">Data collection</a>
-                    <a href="#">Data analysis</a>
-                    <a href="#">Method</a>
-                    <a href="#">Introduction</a>
-                    <a href="#">Results</a>
-                </div>Modeling
+                    <a href="https://2021.igem.org/Team:NJMU-China/Parts">Parts</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Contribution">Contribution</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Engineering">Engineering Success</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Improve">Improve</a>
+                </div>PARTS
             </li>
             <li>
                 <div>
-                    <a href="#">Summary</a>
-                    <a href="#">Survey</a>
-                    <a href="#">Collaboration</a>
-                    <a href="#">Education</a>
-                </div>Human Practice
+                    <a
+                        href="https://2021.igem.org/Team:NJMU-China/Model#Data-collection"
+                    >Data collection</a>
+                    <a
+                        href="https://2021.igem.org/Team:NJMU-China/Model#Data-analysis"
+                    >Data analysis</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Model#Method">Method</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Model#Introduction">Introduction</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Model#Results">Results</a>
+                </div>MODEL
+            </li>
+            <li>
+                <div>
+                    <a
+                        href="https://2021.igem.org/Team:NJMU-China/Human_Practices"
+                    >Integrated Human Practices</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Partnership">Partnership</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Collaborations">Collaboration</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Communication">Communication</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Education">Education</a>
+                    <a
+                        href="https://2021.igem.org/Team:NJMU-China/Entrepreneurship"
+                    >Entrepreneurship</a>
+                    <a
+                        href="https://2021.igem.org/Team:NJMU-China/Excellence in another area"
+                    >Excellence in another area</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/poster">Poster</a>
+                </div>HUMAN PRACTICE
             </li>
             <li>
                 <div>
                     <a href="https://2021.igem.org/Team:NJMU-China/Members">Members</a>
-                    <a href="#">Attributions</a>
-                    <a href="#">Call(?)</a>
-                </div>Our Team
+                    <a href="https://2021.igem.org/Team:NJMU-China/Team">Team</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Attributions">Attributions</a>
+                </div>TEAM
             </li>
             <li>
                 <div>
-                    <a href="#">Judging from</a>
-                </div>Judging From
+                    <a href="https://2021.igem.org/Team:NJMU-China/Inclusivity">Inclusivity</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Sustainability">Sustainability</a>
+                </div>AWARDS
+            </li>
+            <li>
+                <div>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Judging">Judging</a>
+                    <a href="https://2021.igem.org/Team:NJMU-China/Judging Form">Judging Form</a>
+                </div>JUDGING
             </li>
         </ul>
     </nav>
@@ -105,17 +138,20 @@ img {
 
 /* 设置导航栏样式 */
 nav {
+    --height: calc(1.3vw + 4vh);
     position: relative;
     position: fixed;
     width: 100vw;
-    height: 75px;
-    padding: 10px;
+    height: var(--height);
+    padding-left: 1vh;
     background-color: #0f354ef3;
     /* background-color: rgb(91, 189, 254); */
     /* border-bottom: 2px solid rgb(254, 213, 123); */
-    box-shadow: 0px 2px 5px #555;
-    z-index: 1000000;
+    /* box-shadow: 0px 2px 5px #555; */
+    /* box-shadow: 0px 2px 2px rgb(121, 121, 121); */
+    z-index: 9998;
     transition: all 0.4s ease;
+    /* overflow: hidden; */
 }
 nav:hover {
     background-color: #0f354e;
@@ -124,11 +160,14 @@ nav:hover {
 /* 设置导航栏中头像框样式 */
 nav span {
     position: relative;
-    width: 55px;
-    height: 55px;
+    /* width: 55px;
+    height: 55px; */
+    width: calc(1.2 * var(--height));
+    height: calc(1.2 * var(--height));
     float: left;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top: 1vh;
+    margin-left: 1.2vw;
+    margin-right: 0.8vw;
     border-radius: 50%;
     background-color: #fff;
     overflow: hidden;
@@ -137,10 +176,9 @@ nav span {
 
 nav span img {
     position: absolute;
-    top: -16px;
-    left: -16px;
-    width: 92px;
-    height: 92px;
+    transform: scale(1.7) translate(1.1px, 1.6px);
+    width: calc(1.2 * var(--height));
+    height: calc(1.2 * var(--height));
     object-fit: cover;
     border-radius: 50%;
 }
@@ -168,15 +206,16 @@ nav ul {
     flex-wrap: nowrap;
     justify-content: flex-start;
 }
+
 nav li {
     /* 定位 */
     position: relative;
     /* 大小形状颜色 */
-    padding: 12px 19px;
-    padding-right: 43px;
-    border-radius: 28px;
+    height: var(--height);
+    padding: 1vh calc(0.7vw + 1vh);
     /* 字体 */
-    font-size: 25px;
+    font-size: calc(0.7vw + 2vh);
+    white-space: nowrap;
     color: #fff;
     /* font-family: "StarLight"; */
     font-family: "Microsoft YaHei";
@@ -185,8 +224,19 @@ nav li {
     text-shadow: 1px 2px 3px #666;
     /* 鼠标默认 */
     cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+@media screen and (max-aspect-ratio: 1280/800) {
+    /* nav ul {
+        display: none;
+    } */
+    nav li {
+        font-size: calc(0.7vw + 1vh);
+        height: calc(1.3vw + 4vh);
+    }
+}
 nav li:hover {
     color: rgb(254, 213, 123);
 }
@@ -197,48 +247,66 @@ nav li:hover::after {
 }
 
 nav li:hover div {
-    display: block;
+    display: flex;
     animation: unfold 0.3s forwards;
 }
 
 nav div {
-    display: inline-block;
-    position: absolute;
-    top: 30px;
-    left: 7px;
     /* max-width: 30px; */
+    position: absolute;
+    top: calc(1.3vw + 4vh);
     max-height: 30px;
-    border-radius: 15px;
-    background-color: rgb(130, 207, 255);
-    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+    /* border-radius: 15px; */
+    border-radius: 0 0 8px 8px;
+    /* background-color: rgb(130, 207, 255); */
+    background-color: #0f354e;
+    box-shadow: 0px 4px 8px 0px rgb(0, 0, 0, 0.2);
     display: none;
     overflow: hidden;
+    flex-direction: column;
 }
 
 @keyframes unfold {
     to {
-        max-width: 160px;
-        max-height: 300px;
+        max-width: 300px;
+        max-height: 800px;
     }
 }
 
 nav div a {
-    display: block;
-    padding: 15px;
-    border-radius: 15px;
-    font-size: 18px;
+    position: relative;
+    padding: 1.5vh 1vw;
+    font-size: 1.3vw;
     font-weight: 500;
     color: #fff;
     white-space: nowrap;
+    transition: all;
+    z-index: 1;
 }
 
-nav div a:hover {
-    background-color: rgb(39, 162, 233);
+nav div a::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* opacity: 0; */
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    /* transition: all 0.3s ease-out; */
+    /* background: linear-gradient(to right, #eb3349, #f45c43); */
+    background: linear-gradient(to right, rgb(36, 158, 240), rgb(74, 203, 235));
+}
+nav div a:hover::before {
+    transform: scaleX(1);
+    /* opacity: 1; */
 }
 
 /* 使用zero占位，去除nav定位设置为fixed后的影响 */
 .zero {
-    height: 75px;
+    height: calc(1.3vw + 4vh);
     background-color: #2070a5;
 }
 

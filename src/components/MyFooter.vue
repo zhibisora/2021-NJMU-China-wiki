@@ -101,7 +101,7 @@ footer {
     background-color: rgb(151, 106, 106);
     /* background-color: rgb(201, 230, 245); */
     /* 和ul一样，详见ul */
-    min-height: 501px;
+    /* min-height: 501px; */
 }
 
 html {
@@ -116,37 +116,39 @@ img {
 
 /* 页脚开始 */
 footer {
+    --height: calc(1.3vw + 4vh);
     position: relative;
-    padding: 90px;
+    padding: calc(1.5 * var(--height));
     text-align: center;
 }
 
 footer p {
-    padding: 30px;
+    padding: calc(0.6 * var(--height));
     border-top: 2px solid rgb(254, 213, 123);
     color: rgb(252, 179, 23);
-    font-size: 30px;
+    font-size: calc(0.6 * var(--height));
     font-weight: 500;
     cursor: default;
 }
 
 footer ul {
-    padding: 0 90px;
+    padding: 0 calc(0.6 * var(--height));
     /* min-height 由所有图片渲染完成后得出，目的是为了保证在没有渲染图片的时候footer的高度不影响其他的一些布局或者效果 */
     /* 同时也保证了直接滚动到最后的时候，不会因为之前没有渲染出来而卡在进度条之前的底端的部位，也保证了未渲染时进度条不会有太大的变化 */
     /* 这对于制作自制的进度条是很有帮助的，不会出现突然缩短的bug */
     /* 如果修改了图片或其它影响ul高度的东西，请及时修改这一条css属性，保证其他效果或程序(代码块)的兼容性 */
-    min-height: 214px;
+    /* 在使用v-show后 不再需要该属性 */
+    /* min-height: calc(4.3 * var(--height)); */
 }
 
 footer li {
     display: inline-block;
-    width: 320px;
-    height: 75px;
+    width: calc(6.4 * var(--height));
+    height: calc(1.5 * var(--height));
 }
 
 footer li img {
-    width: 320px;
+    width: calc(6.4 * var(--height));
 }
 
 /* 页脚结束 */

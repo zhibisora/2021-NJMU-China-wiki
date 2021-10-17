@@ -1,11 +1,11 @@
 <template class="font-sans selection:bg-gray-400">
   <div class="font-sans selection:bg-gray-400">
-    <Modeling></Modeling>
+    <Description></Description>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Modeling from '../src/views/Modeling.vue'
+import Description from '../src/views/Description.vue'
 </script>
 
 <style>

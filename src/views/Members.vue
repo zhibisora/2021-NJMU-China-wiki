@@ -70,11 +70,11 @@ let articleArray1 = ref([
     "Professor Xingyin Liu is a doctoral supervisor in the School of Basic Medicine Science at Nanjing Medical University. Her researches mainly focus on gut-microbiota-brain axis in Autism disease and investigating bacteria activity linking to pathogenesis of Autism disease. Professor Liu has provided us with the laboratory, full support and supervision on our project, especially for the research direction, the engineered bacterial experiment and public welfare activities for Autism family. She is a key member of our consultant team.",
 ])
 let srcArray1 = ref([
-    // "url(/Team:NJMU-China/images/Members/照片/Zhibin Hu.jpg)",
-    // "url(/Team:NJMU-China/images/Members/照片/Ran Huo.jpg)",
-    // "url(/Team:NJMU-China/images/Members/照片/Chuan Su.jpg)",
-    // "url(/Team:NJMU-China/images/Members/照片/Li Yuan.jpg)",
-    // "url(/Team:NJMU-China/images/Members/照片/Xingyin Liu.jpg)",
+    // "url(https://2021.igem.org/wiki/images/b/be/T--NJMU-China--Zhibin_Hu.png)",
+    // "url(https://2021.igem.org/wiki/images/a/a2/T--NJMU-China--Ran_Huo.png)",
+    // "url(https://2021.igem.org/wiki/images/4/4f/T--NJMU-China--Chuan_Su.png)",
+    // "url(https://2021.igem.org/wiki/images/4/46/T--NJMU-China--Li_Yuan.png)",
+    // "url(https://2021.igem.org/wiki/images/f/f6/T--NJMU-China--Xingyin_Liu.png)",
 ])
 
 
