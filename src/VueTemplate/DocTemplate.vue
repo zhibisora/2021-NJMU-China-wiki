@@ -13,6 +13,8 @@ import DocH2 from '../components/DocH2.vue'
 import DocH3 from '../components/DocH3.vue'
 import DocImg from '../components/DocImg.vue'
 import DocTemplateVue from '../components/DocTemplate.vue'
+import DocLink from '../components/DocLink.vue'
+import DocImgDetail from '../components/DocImgDetail.vue'
 </script>
 
 <style scoped>
