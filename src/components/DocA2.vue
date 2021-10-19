@@ -32,7 +32,7 @@ const props = defineProps({
     },
     cps: {
         type: Number,
-        required: true,
+        required: false,
     },
     w: {
         type: String,
@@ -42,8 +42,18 @@ const props = defineProps({
     h: {
         type: String,
         required: true,
+    },
+    f: {
+        type: Function,
+        required: false,
     }
 })
+let cps: number = null!
+if (props.cps) {
+    cps = props.cps
+} else if (props.f) {
+    cps = props.f()
+}
 </script>
 
 <style scoped>

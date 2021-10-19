@@ -57,11 +57,17 @@
             <DocH2 title="Introduction" id="Introduction"></DocH2>
             <p>Our goal is to assist and validate the project design. The model includes three objects:</p>
             <h4>Objective 1:</h4>
-            <p>I: Analyse dataet of RNA-seq characteristics of the pregnant to search for a reasonable target to identity and decrease the risk of autism.</p>
-            <p>II:Identity the pregnant whose children with high-risk of autism through machine learning and offer measures of primary prevention.</p>
+            <p>
+                I: Analyse dataet of RNA-seq characteristics of the pregnant to search for a reasonable target to identity and decrease the risk of autism.
+                <br />II:Identity the pregnant whose children with high-risk of autism through machine learning and offer measures of primary prevention.
+            </p>
+            <DocImg src="https://2021.igem.org/wiki/images/9/9b/T--NJMU-China--Model0.1.png"></DocImg>
             <h4>Objective 2:</h4>
-            <p>I:Analyse metabolic characteristics of the offsprings to find targets to identity and offer treatments.</p>
-            <p>II:Propose a screening model for autism by detecting immue factors in the peripheral blood .</p>
+            <p>
+                I:Analyse metabolic characteristics of the offsprings to find targets to identity and offer treatments.
+                <br />II:Propose a screening model for autism by detecting immue factors in the peripheral blood .
+            </p>
+            <DocImg src="https://2021.igem.org/wiki/images/e/e8/T--NJMU-China--Model0.2.png"></DocImg>
             <h4>Objective 3:</h4>
             <p>Verify the rationality of the project design through mathematical modeling and 3-D modeling</p>
             <DocH2 title="Results" id="Results"></DocH2>
@@ -115,11 +121,12 @@
             <p>Considering for disorder of immune and metabolism in pregnant mothers, we attempted to explore changes of immune system and metabolism system in their offsprings.</p>
             <p>We performed metabolite and immune factors profile of 26 ASD individuals and 26 TDs[7]. Then we detected the immune and metabolism conditions in autistic children for the purpose to screen autistic children in the early stage and put forward a reasonable plan for our experiment design to identity and treat children with autism in the meanwhile.</p>
             <p>Based on the data of untargeted metabolomics in the offsprings, we found differential metabolites between ASD individuals and controls. The results of variation analysis are shown below.</p>
-            <DocLinkVue
+            <DocLink
                 href="https://2021.igem.org/wiki/images/f/fd/T--NJMU-China--Model-Excel.xlsx"
-            >Get Excel</DocLinkVue>
+            >Get Excel</DocLink>
             <p>To find major problems in metabolism, we conducted pathway enrichment analysis. The results indicated that metabolic disorders occurred in the gut of autistic children, metabolites involved in the pathways accumulated(Figure 3A). Connect with our experiment part, we chose tryptophan as our sensor in autistic children to start coding oxytocin.</p>
             <DocImg src="https://2021.igem.org/wiki/images/a/a6/T--NJMU-China--Model3.1.png"></DocImg>
+            <DocImg src="https://2021.igem.org/wiki/images/7/7f/T--NJMU-China--Model0.3.png"></DocImg>
             <h4>2. The regression model</h4>
             <p>To confirm the positive effects of oxytocin for autism children, we got the data from a double-blind, randomized, placebo-controlled, crossover, clinical trial study of intranasal-administered oxytocin in young children with autism[8]. Based on the data, we performed the regression model in the following five indicators. The results showed that SRS-P and DBC-P can be effectively decreased by oxytocin.</p>
             <DocImg src="https://2021.igem.org/wiki/images/6/65/T--NJMU-China--Model3.2.png"></DocImg>
@@ -137,6 +144,7 @@
             <p>Principal component analysis (PCA) is a mathematical algorithm that reduces the dimensionality of the data while retaining most of the variation in the data set1. It accomplishes this reduction by identifying directions, called principal components, along which the variation in the data is maximal. By using a few components, each sample can be represented by relatively few numbers instead of by values for thousands of variables. Samples can then be plotted, making it possible to visually assess similarities and differences between samples and determine whether samples can be grouped[9].</p>
             <p>In order to observe the approximate distribution of the data, we conducted PCA and selected the first two principal components(Figure 4B). The results show that the first two principal components can better distinguish the difference of immune factors between ASD group and control group, and draw the cumulative contribution rate diagram. The results show that the contribution of IL4, IL17A and IL10 is high(Figure 4C).</p>
             <DocImg src="https://2021.igem.org/wiki/images/3/34/T--NJMU-China--Model4.2.png"></DocImg>
+            <p></p>
             <DocImg src="https://2021.igem.org/wiki/images/0/04/T--NJMU-China--Model4.3.png"></DocImg>
             <p>We classified the data into test set and training set (7:3). We use the training set to build a random forest model. 52 observation points are randomly selected from the training set, and 3 variables are randomly selected at each node of each tree, so as to generate 500 classical decision trees. Compared with the real category, the out of bag prediction (OOB) error, that is, OOB estimate of error rate, is 5.57%, which shows that the accuracy of the classifier model is very high and can effectively identify the two groups.</p>
             <p>We tested the training set by ourselves. All samples can be classified well. The confusion matrix shows that both ASD group and control group have 100% classification accuracy.</p>

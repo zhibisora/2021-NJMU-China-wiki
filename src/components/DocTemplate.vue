@@ -6,7 +6,7 @@
             class="sidebar fixed w-1/6 h-[calc(100vh-(1.3vw+4vh))] text-left"
             :class="{ isBottom: is_bottom }"
         >
-            <slot name="index" :s="s"></slot>
+            <slot name="index" :s="s" :i="geti"></slot>
         </div>
         <article class="article bg-white w-[77.5%] relative left-[16.6667%] p-12 text-left pt-2">
             <slot name="content"></slot>
@@ -28,10 +28,12 @@ import MyNav from "../components/MyNav.vue"
 
 var as: NodeListOf<HTMLAnchorElement> = null!
 var anchors: NodeListOf<HTMLAnchorElement> = null!
+var anchorslen: number = null!
 onMounted(() => {
     window.addEventListener('scroll', handleScroll)
     as = document.querySelectorAll('a')
     anchors = document.querySelectorAll('.anchor')
+    anchorslen = anchors.length - 1
 })
 let is_bottom = ref(false)
 let handleScroll = () => {
@@ -61,7 +63,7 @@ let handleInRangeStatus = (scrollTop: number) => {
     // scrollTop -= 67
 
 
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < anchorslen; i++) {
         // console.log(scrollTop)
         // console.log(anchors[0].offsetTop)
         // console.log(anchors[1].offsetTop)
@@ -70,12 +72,18 @@ let handleInRangeStatus = (scrollTop: number) => {
             inRangeStatus.value = i
         }
     }
-    if (scrollTop > anchors[9].offsetTop) {
-        inRangeStatus.value = 9
+    if (scrollTop > anchors[anchorslen].offsetTop) {
+        inRangeStatus.value = anchorslen
     }
     if (scrollTop < anchors[0].offsetTop) {
         inRangeStatus.value = -1
     }
+}
+// 
+let i = -1
+let geti = () => {
+    i++
+    return i
 }
 </script>
 

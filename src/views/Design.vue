@@ -48,8 +48,8 @@
         </template>
         <template v-slot:content>
             <DocH2 title="Design" id="Design"></DocH2>
-            <p>The etiology of autism is normally thought to be environmental or genotypic. According to the article published in Cell which presents the largest exome sequencing study of ASD to date (n = 35,584 total samples, 11,986 with ASD), there are 102 genes identified as the risk genes for ASD (at a false discovery rate of 0.1 or less)[1]. While the potentially dangerous environmental factors to the maternal generation, such as Maternal immune activation (MIA) and Gestational diabetes mellitus (GDM), can also be the cause of ASD.</p>
-            <p>According to the gut-brain axis theory, whether it is maternal immune activation or genetic factors, the etiologies of autism are all related to the gut microbiome.</p>
+            <p>The etiology of autism is normally thought to be interaction of genetics and environment. According to the article published in Cell which presents the largest exome sequencing study of ASD to date (n = 35,584 total samples, 11,986 with ASD), there are 102 genes identified as the risk genes for ASD (at a false discovery rate of 0.1 or less)[1]. While the potentially dangerous environmental factors to the maternal generation, such as Maternal immune activation (MIA) and Gestational diabetes mellitus (GDM), can also be the cause of ASD.</p>
+            <p>In recent years, increasing evidences showed both maternal immune activation and genetic factors showed related to composition of the gut microbiome.</p>
             <p>Active communication between the gut microbiome and the central nervous system (CNS) can be achieved through at least three parallel and interconnecting routes--Immune/Endocrine/Neuronal[2].</p>
             <p>The gut microbiome interacts intimately with the intestines. And CNS diseases such as ASD or stroke can modify the composition of the gut microbiome, leading to a vicious cycle where gut dysbiosis exacerbates the neuroimmune response and aggravates brain pathology and behavior.</p>
             <DocImg
@@ -70,8 +70,7 @@
             <DocH2 title="Part I:" id="Part-I"></DocH2>
             <p>Epidemiological studies suggest that, in humans, fetus’ exposure to maternal inflammation increases the likelihood of autism spectrum disorder[3].</p>
             <DocImg src="https://2021.igem.org/wiki/images/a/a0/T--NJMU-China--Design2.1.png"></DocImg>
-            <p>When the immune system of a will-be-mother is activated due to infections or autoinflammatory syndromes, the Th17 and Treg cells in her bowel will lose their balance and inflammatory factors, such as IL-17, can then be transferred across the placental barrier to harm the nervous system of the fetus. In this case, her child will have an increased risk of neurodevelopmental disorders.</p>
-            <p>We decided to develop a probiotic strain of E. coli as a novel, self-tuning “drug” for pregnant women to reduce the risk of autism in the offspring.</p>
+            <p>When the immune system of a will-be-mother is activated due to infections or autoinflammatory syndromes, the Th17 and Treg cells in her bowel will lose their balance and inflammatory factors, such as IL-17, can then be transferred across the placental barrier to harm the nervous system of the fetus. In this case, her child will have an increased risk of neurodevelopmental disorders. Based on this phenomenon, we decided to develop a probiotic strain, Nissle 1917 as a novel, self-tuning “drug” for pregnant women to reduce the risk of autism in the offspring.</p>
             <p>
                 Our core design are as follows:
                 <br />1.Building an AND gate composed of a 36℃-induced promoter and NO-induced promoter as a multi input module
@@ -108,13 +107,10 @@
             <DocImg
                 src="https://2021.igem.org/wiki/images/6/62/T--NJMU-China--Design3.2--compressed.png"
             ></DocImg>
-            <p>Oxt is important for social memory and attachment, sexual and maternal behavior, and aggression. Recent work implicates Oxt in human bonding and trust as well. Human disorders characterized by aberrant social interactions, such as autism and schizophrenia, may also involve Oxt expression[5].</p>
+            <p>Oxt is important for social memory and attachment, sexual and maternal behavior, and aggression. Recent work implicated Oxt in human bonding and trust as well. Human disorders characterized by aberrant social interactions, such as autism and schizophrenia, may also involve Oxt expression[5].</p>
             <p>The neuropeptide oxytocin (OT) has emerged as a key regulator of diverse social behaviors in vertebrates and, thus, has been identified as a potential therapeutic target for improving social dysfunction, which can be transported to the central nervous system through gut-brain axis[6,7].</p>
-            <p>We attempted to improve the emotional function and social behaviors of autistic children by coding oxytocin. We also added a signal peptide to make it secretory.</p>
-            <h3>
-                Suicide switch:
-                <span id="Suicide-switch2" class="anchor"></span>
-            </h3>
+            <p>We attempted to improve the emotional function and social behaviors of autistic children by elevating oxytocin level through our engineered bacteria with signal secretory peptide.</p>
+            <DocH3 title="Suicide switch:" id="Suicide-switch2"></DocH3>
             <p>Similarly, we use the same part as that for the maternal generation.</p>
             <pre class="whitespace-pre-line italic p-10 selection:bg-gray-400">
                 1.	Satterstrom, F.K., et al., Large-Scale Exome Sequencing Study Implicates Both Developmental and Functional Changes in the Neurobiology of Autism. Cell, 2020. 180(3): p. 568-584 e23.

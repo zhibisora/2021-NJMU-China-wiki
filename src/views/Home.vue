@@ -1,337 +1,811 @@
 <template>
     <div class="init">
         <MyNav></MyNav>
-        <section class="sect">
-            <div class="star text-white z-10 pointer-events-none">
-                <span class="star_text">click our logo to start</span>
-            </div>
-            <a href="#Abstract">
-                <img
-                    src="https://2021.igem.org/wiki/images/0/0b/T--NJMU-China--logo.png"
-                    alt="star"
-                    class="star"
-                />
-            </a>
+        <section class="sect sect1">
             <img
                 src="https://2021.igem.org/wiki/images/9/9b/T--NJMU-China--starry_sky2.gif"
                 alt="starry sky"
                 class="starry_sky"
             />
+            <HomeImg id="st1" src="https://2021.igem.org/wiki/images/7/73/T--NJMU-China--star1.png"></HomeImg>
+            <HomeImg id="st2" src="https://2021.igem.org/wiki/images/c/cf/T--NJMU-China--star2.png"></HomeImg>
+            <HomeImg id="st3" src="https://2021.igem.org/wiki/images/3/30/T--NJMU-China--star3.png"></HomeImg>
+            <HomeImg
+                id="bt1"
+                src="https://2021.igem.org/wiki/images/9/99/T--NJMU-China--bottle.png"
+            ></HomeImg>
+            <div
+                class="Home_div"
+                id="t1"
+            >There are stars twinkling in the distant sky. They are all waiting for their time to drop on the earth.</div>
+            <div class="Home_div" id="t2">And some of them happened to be trapped in a bottle.</div>
         </section>
-        <!-- <div>
-            <canvas
-                linewidth="300"
-                id="myCanvas"
-                width="300"
-                height="550"
-                style="position: absolute;margin-top: -4.9375rem;margin-left: 600px;"
-            ></canvas>
-            <canvas
-                linewidth="300"
-                id="myCanvas1"
-                width="700"
-                height="700"
-                style="position: absolute; margin-top:750px;margin-left: -200px;"
-            ></canvas>
-            <canvas
-                linewidth="300"
-                id="myCanvas2"
-                width="700"
-                height="750"
-                style="position: absolute; margin-top:1590px;margin-left: -300px;"
-            ></canvas>
-            <canvas
-                linewidth="300"
-                id="myCanvas3"
-                width="700"
-                height="500"
-                style="position: absolute; margin-top:2430px;margin-left: -300px;"
-            ></canvas>
-            <canvas
-                linewidth="300"
-                id="myCanvas4"
-                width="700"
-                height="640"
-                style="position: absolute; margin-top:3120px;margin-left: -300px;"
-            ></canvas>
-            <canvas
-                linewidth="300"
-                id="myCanvas5"
-                width="700"
-                height="440"
-                style="position: absolute; margin-top:4190px;margin-left: -300px;"
-            ></canvas>
-        </div>-->
-        <section class="sect sect2" id="Abstract">
-            <div class="imgBox">
-                <!-- <div
-                    class="h-full absolute w-full bg-cover bg-center"
-                    style="background-image: url(https://2021.igem.org/wiki/images/e/e5/T--NJMU-China--1.1.png)"
-                ></div>-->
+        <section class="sect relative sect2">
+            <div id="shell1">
+                <HomeImg
+                    id="m1"
+                    src="https://2021.igem.org/wiki/images/9/9f/T--NJMU-China--9.1--compressed.png"
+                ></HomeImg>
+                <HomeImg
+                    id="stbt1"
+                    src="https://2021.igem.org/wiki/images/5/57/T--NJMU-China--starbottle2.png"
+                ></HomeImg>
+                <HomeImg
+                    id="btch1"
+                    src="https://2021.igem.org/wiki/images/1/12/T--NJMU-China--6.4--compressed.png"
+                ></HomeImg>
                 <div
-                    class="h-full absolute w-full bg-cover bg-center"
-                    style="background-image: url(https://2021.igem.org/wiki/images/a/af/T--NJMU-China--1.3.png)"
-                ></div>
-                <div
-                    class="h-full absolute w-full bg-cover bg-center"
-                    style="background-image: url(https://2021.igem.org/wiki/images/9/9e/T--NJMU-China--1.2.png)"
-                ></div>
+                    class="Home_div"
+                    id="t3"
+                >And when the trapped one falls into a human’s bosom, the lady becomes his or her dear mother.</div>
+                <div class="Home_div2" id="t4">When they grow up…</div>
             </div>
-            <div class="textBox">
-                <span
-                    class="text"
-                >As a medical college, students in Nanjing Medical University often actively participate in voluntary activities such as the COVID-19 nucleic acid testing.</span>
+            <div id="shell2">
+                <HomeImg
+                    id="chs1"
+                    src="https://2021.igem.org/wiki/images/e/e5/T--NJMU-China--6.3--compressed.png"
+                ></HomeImg>
+                <HomeImg
+                    id="btch2"
+                    src="https://2021.igem.org/wiki/images/1/12/T--NJMU-China--6.4--compressed.png"
+                ></HomeImg>
+                <div
+                    class="Home_div"
+                    id="t5"
+                >They find it hard to make friends with other ‘normal’ kids.</div>
             </div>
         </section>
-        <section class="sect sect3">
-            <div class="imgBox row-span-2">
-                <div
-                    class="h-full absolute w-full bg-cover"
-                    style="background-image: url(https://2021.igem.org/wiki/images/b/b9/T--NJMU-China--2.1--compressed.png)"
-                ></div>
-            </div>
-            <div class="textBox textBox2">
-                <span
-                    class="text text-[3vh]"
-                >Last year, we went to Star Of The Sea（海之星）to do volunteer activities. Because of this opportunity in such an educational institution specially for autistic children, we got to know a group of special kids - autistic children.</span>
-            </div>
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover img2"
-                    style="background-image: url(https://2021.igem.org/wiki/images/8/83/T--NJMU-China--2.3.png)"
-                ></div>
-            </div>
-            <div class="imgBox col-span-2">
-                <div
-                    class="h-full absolute w-full bg-cover img3"
-                    style="background-image: url(https://2021.igem.org/wiki/images/3/35/T--NJMU-China--2.2--compressed.png)"
-                ></div>
+        <section class="sect relative sect3">
+            <HomeImg
+                id="bg2"
+                src="https://2021.igem.org/wiki/images/a/a8/T--NJMU-China--starrysky2--compressed.png"
+            ></HomeImg>
+            <HomeImg
+                id="eh1"
+                src="https://2021.igem.org/wiki/images/3/3e/T--NJMU-China--earth--compressed.png"
+            ></HomeImg>
+            <HomeImg id="ch1" src="https://2021.igem.org/wiki/images/b/ba/T--NJMU-China--6.5.png"></HomeImg>
+            <div class="Home_div3" id="t6">
+                So the little one
+                stays in his or her own planet.
+                Apart from them, nobody has ever
+                landed on their
+                planets.
+                And nobody can be certain about what their planets
+                are like.
             </div>
         </section>
-        <section class="sect sect4">
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img1 z-10"
-                    style="background-image: url(https://2021.igem.org/wiki/images/9/9e/T--NJMU-China--3.1.png)"
-                ></div>
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img2"
-                    style="background-image: url(https://2021.igem.org/wiki/images/2/2b/T--NJMU-China--3.2.png)"
-                ></div>
-            </div>
-            <div class="textBox textBox3">
-                <span
-                    class="text"
-                >After in-depth understanding, we discovered that autism is one of the fastest-growing developmental disability.</span>
+        <section class="sect relative sect4">
+            <img
+                src="https://2021.igem.org/wiki/images/a/a8/T--NJMU-China--starrysky2--compressed.png"
+                alt="starry sky"
+                class="starry_sky"
+            />
+            <div class="Home_div2" id="t7">
+                Is that lonely?
+                <br />Is that empty ?
+                <br />
+                <br />Nobody knows...
             </div>
         </section>
-        <section class="sect sect5">
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img1"
-                    style="background-image: url(https://2021.igem.org/wiki/images/b/b1/T--NJMU-China--4.1--compressed.png)"
-                ></div>
-                <!-- <div
-                    class="h-full absolute w-full bg-cover bg-center img2"
-                    style="background-image: url(https://2021.igem.org/wiki/images/2/2b/T--NJMU-China--3.2.png)"
-                ></div>-->
+        <section class="sect relative sect5">
+            <div id="shell3">
+                <HomeImg
+                    id="btch3"
+                    src="https://2021.igem.org/wiki/images/1/12/T--NJMU-China--6.4--compressed.png"
+                ></HomeImg>
+                <div class="Home_div3" id="t8">
+                    And they are what we call
+                    ‘Children From the Star’.
+                    Professionally speaking,
+                    ‘Children with ASD’.
+                </div>
             </div>
-            <div class="textBox textBox3">
-                <span
-                    class="text"
-                >According to American CDC, prevalence of autism in the U.S. has increased from 1 in 68 births in 2010 to 1 in 54 births in 2020.</span>
-            </div>
-        </section>
-        <section class="sect sect6">
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img1"
-                    style="background-image: url(https://2021.igem.org/wiki/images/8/81/T--NJMU-China--4.5--compressed.png)"
-                ></div>
-                <!-- <div
-                    class="h-full absolute w-full bg-cover bg-center img2"
-                    style="background-image: url(https://2021.igem.org/wiki/images/2/2b/T--NJMU-China--3.2.png)"
-                ></div>-->
-            </div>
-            <div class="textBox textBox3">
-                <span class="text">And in China the statistic is about 1 in 100 births.</span>
-            </div>
-        </section>
-        <section class="sect sect2">
-            <div class="textBox">
-                <span class="text">
-                    On May 14, 2021, SJTU & Science released the booklet 125 Questions: Exploration
-                    and Discovery. The problem what is the
-                    etiology of autism indicated that autism
-                    has aroused strong social concern.
-                </span>
-            </div>
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center"
-                    style="background-image: url(https://2021.igem.org/wiki/images/b/b0/T--NJMU-China--5.2--compressed.png)"
-                ></div>
+            <div id="shell4">
+                <div class="Home_div2" id="t9">
+                    They present with
+                    varying degrees of
+                    dysfunctional
+                    communication and social skills, repetitive and stereotypic
+                    behaviors, and
+                    attention, cognitive, learning and sensory defects.
+                </div>
+                <HomeImg
+                    id="adch1"
+                    src="https://2021.igem.org/wiki/images/c/c0/T--NJMU-China--6.1--compressed.png"
+                ></HomeImg>
+                <HomeImg
+                    id="adch2"
+                    src="https://2021.igem.org/wiki/images/7/7b/T--NJMU-China--6.2--compressed.png"
+                ></HomeImg>
             </div>
         </section>
-        <section class="sect sect8">
-            <div class="textBox">
-                <span class="text">
-                    In contact with these
-                    children, we found that this set of heterogeneous
-                    neurodevelopmental
-                    conditions are
-                    characterised by early-onset difficulties in social
-                    communication and
-                    unusually restricted,
-                    repetitive behaviour and
-                    interests.
-                </span>
-            </div>
-            <div class="imgBox">
+        <section class="sect relative sect6">
+            <div id="shell5">
+                <HomeImg
+                    id="co1"
+                    src="https://2021.igem.org/wiki/images/9/9e/T--NJMU-China--3.1.png"
+                ></HomeImg>
+                <HomeImg
+                    id="ln1"
+                    src="https://2021.igem.org/wiki/images/2/2b/T--NJMU-China--3.2.png"
+                ></HomeImg>
                 <div
-                    class="h-full absolute w-full bg-cover bg-center"
-                    style="background-image: url(https://2021.igem.org/wiki/images/c/c0/T--NJMU-China--6.1--compressed.png)"
-                ></div>
+                    class="Home_div2"
+                    id="t10"
+                >Autism is the fastest-growing developmental disability.</div>
+            </div>
+            <div id="shell6">
+                <div id="ss1">
+                    <HomeImg
+                        id="pp1"
+                        src="https://2021.igem.org/wiki/images/b/b1/T--NJMU-China--4.1--compressed.png"
+                    ></HomeImg>
+                    <HomeImg
+                        id="pp2"
+                        src="https://2021.igem.org/wiki/images/e/ee/T--NJMU-China--4.2--compressed.png"
+                    ></HomeImg>
+                </div>
+                <div id="ss2">
+                    <HomeImg
+                        id="pp3"
+                        src="https://2021.igem.org/wiki/images/4/47/T--NJMU-China--4.3--compressed.png"
+                    ></HomeImg>
+                    <HomeImg
+                        id="pp4"
+                        src="https://2021.igem.org/wiki/images/c/cf/T--NJMU-China--4.4.png"
+                    ></HomeImg>
+                </div>
+                <div
+                    class="Home_div"
+                    id="t11"
+                >According to American CDC, prevalence of autism in the U.S. has increased from 1 in 68 births in 2010 to 1 in 54 births in 2020.</div>
+            </div>
+            <div id="shell7">
+                <HomeImg
+                    id="pp5"
+                    src="https://2021.igem.org/wiki/images/8/81/T--NJMU-China--4.5--compressed.png"
+                ></HomeImg>
+                <HomeImg
+                    id="pp6"
+                    src="https://2021.igem.org/wiki/images/6/61/T--NJMU-China--4.6--compressed.png"
+                ></HomeImg>
+                <div class="Home_div" id="t12">And in China the statistic is about 1 in 100 births.</div>
             </div>
         </section>
-        <section class="sect sect9">
-            <div class="col-span-3"></div>
-            <div class="imgBox row-span-2">
+        <section class="sect relative sect7">
+            <HomeImg
+                id="cl1"
+                src="https://2021.igem.org/wiki/images/b/b9/T--NJMU-China--clinic--compressed.png"
+            ></HomeImg>
+            <div id="ss4">
+                <HomeImg
+                    id="chs2"
+                    src="https://2021.igem.org/wiki/images/3/35/T--NJMU-China--2.2--compressed.png"
+                ></HomeImg>
                 <div
-                    class="h-full absolute w-full bg-cover bg-center img1"
-                    style="background-image: url(https://2021.igem.org/wiki/images/4/41/T--NJMU-China--7.1.png)"
-                ></div>
+                    class="Home_div2"
+                    id="t13"
+                >In our city——Nanjing, we got to know many autistic children during human practice in Nanjing Brain Hospital,</div>
             </div>
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img2"
-                    style="background-image: url(https://2021.igem.org/wiki/images/e/ee/T--NJMU-China--7.2.png)"
-                ></div>
-            </div>
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img3"
-                    style="background-image: url(https://2021.igem.org/wiki/images/thumb/8/89/T--NJMU-China--7.3--compressed.png/240px-T--NJMU-China--7.3--compressed.png)"
-                ></div>
-            </div>
-            <div class="textBox col-span-2 textBox4">
-                <span class="text">
-                    Last year, we carried out the project “Sound of Silence”
-                    and won the Gold Award.
-                    We proposed a domestic
-                    autism screening method
-                    based on urinary metabolites in view of problems of
-                    screening in autism.
-                </span>
-            </div>
-            <div class="col-span-3"></div>
-        </section>
-        <section class="sect sect10">
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover"
-                    style="background-image: url(https://2021.igem.org/wiki/images/1/12/T--NJMU-China--6.4--compressed.png)"
-                ></div>
-                <div
-                    class="h-full absolute w-full bg-cover"
-                    style="background-image: url(https://2021.igem.org/wiki/images/4/43/T--NJMU-China--8.1--compressed.png)"
-                ></div>
-            </div>
-            <div class="textBox textBox5">
-                <span class="text">
-                    This year, NJMU-China team completely upgraded the project. We constructed the
-                    project of the prevention and
-                    treatment of autism children.
-                </span>
+            <div id="ss3">
+                <div id="ss5">
+                    <HomeImg
+                        id="ads1000"
+                        src="https://2021.igem.org/wiki/images/3/3a/T--NJMU-China--adults--compressed.png"
+                    ></HomeImg>
+                    <HomeImg
+                        id="chs3"
+                        src="https://2021.igem.org/wiki/images/3/35/T--NJMU-China--2.2--compressed.png"
+                    ></HomeImg>
+                </div>
+                <div class="Home_div2" id="t14">
+                    behind them are countless families with heavy
+                    burdens.
+                </div>
             </div>
         </section>
-        <section class="sect sect11">
-            <div class="imgBox row-span-2">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img1"
-                    style="background-image: url(https://2021.igem.org/wiki/images/9/9f/T--NJMU-China--9.1--compressed.png)"
-                ></div>
+        <section class="sect relative sect8">
+            <HomeImg id="pr1" src="https://2021.igem.org/wiki/images/4/41/T--NJMU-China--7.1.png"></HomeImg>
+            <HomeImg id="ig1" src="https://2021.igem.org/wiki/images/e/ee/T--NJMU-China--7.2.png"></HomeImg>
+            <HomeImg
+                id="nj1"
+                src="https://2021.igem.org/wiki/images/8/89/T--NJMU-China--7.3--compressed.png"
+            ></HomeImg>
+            <div class="Home_div" id="t15">
+                In 2020, NJMU-China’s first taste of competition, we carried out
+                the project
+                “Sound of
+                Silence” and won the Gold Award.
             </div>
-            <div></div>
-            <div class="imgBox row-span-2">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img2"
-                    style="background-image: url(https://2021.igem.org/wiki/images/e/e5/T--NJMU-China--9.2.png)"
-                ></div>
-            </div>
-            <div class="textBox textBox6">
-                <span class="text">
-                    In more detail, we focus on maternal prevention and
-                    offspring treatment of
-                    autism caused by maternal
-                    infection during pregnancy.
-                </span>
+            <div class="Home_div" id="t16">
+                We proposed a domestic autism screening
+                method based on urinary metabolites in view
+                of problems of
+                screening in
+                autism.
             </div>
         </section>
-        <section class="sect sect12">
-            <div class="imgBox">
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img1"
-                    style="background-image: url(https://2021.igem.org/wiki/images/5/5e/T--NJMU-China--10.1.png)"
-                ></div>
-                <div
-                    class="h-full absolute w-full bg-cover bg-center img2"
-                    style="background-image: url(https://2021.igem.org/wiki/images/1/18/T--NJMU-China--10.2.png)"
-                ></div>
+        <section class="sect relative sect9">
+            <div id="shell8">
+                <HomeImg
+                    id="btch4"
+                    src="https://2021.igem.org/wiki/images/1/12/T--NJMU-China--6.4--compressed.png"
+                ></HomeImg>
+                <HomeImg
+                    id="adch3"
+                    src="https://2021.igem.org/wiki/images/d/d9/T--NJMU-China--child-and-adult--compressed.png"
+                ></HomeImg>
+                <HomeImg
+                    id="md1"
+                    src="https://2021.igem.org/wiki/images/2/26/T--NJMU-China--medicine.png"
+                ></HomeImg>
+                <div class="Home_div" id="t17">
+                    This year, we further found
+                    that though autism is a
+                    biological disorder, it is
+                    primarily treated through
+                    education and behavioral
+                    services, with medication as an important adjunct.
+                    However, to date, there is
+                    no effective drug to treat
+                    ASD.
+                </div>
             </div>
-            <div class="textBox textBox7">
-                <span class="text">
-                    Our project aims at building up a stairway to the starlight, using engineering probiotics to
-                    prevent autism caused by maternal infection during pregnancy and treat children, thus
-                    structuring a way to health for the ‘Children From the Star’.
-                </span>
+            <div id="shell9">
+                <HomeImg
+                    id="hd1"
+                    src="https://2021.igem.org/wiki/images/4/43/T--NJMU-China--8.1--compressed.png"
+                ></HomeImg>
+                <HomeImg
+                    id="btch5"
+                    src="https://2021.igem.org/wiki/images/1/12/T--NJMU-China--6.4--compressed.png"
+                ></HomeImg>
+                <div class="Home_div" id="t18">
+                    Therefore, we completely
+                    upgraded the project. We
+                    moved our attention from
+                    the diagnostic track to the
+                    therapeutic track.
+                </div>
             </div>
-        </section>
-        <section class="sect sect13">
-            <ul class="list">
-                <a href="https://2021.igem.org/Team:NJMU-China/Description">
-                    <li>
-                        <div>{{ 'img' }}</div>
-                        <span>Project</span>
-                    </li>
-                </a>
-                <a href="https://2021.igem.org/Team:NJMU-China/Experiments">
-                    <li>
-                        <div>{{ 'img' }}</div>
-                        <span>Experiment</span>
-                    </li>
-                </a>
-                <a href="https://2021.igem.org/Team:NJMU-China/Model">
-                    <li>
-                        <div>{{ 'img' }}</div>
-                        <span>Model</span>
-                    </li>
-                </a>
-                <a href="https://2021.igem.org/Team:NJMU-China/Parts">
-                    <li>
-                        <div>{{ 'img' }}</div>
-                        <span>Parts</span>
-                    </li>
-                </a>
-                <a href="https://2021.igem.org/Team:NJMU-China/Human_Practice">
-                    <li>
-                        <div>{{ 'img' }}</div>
-                        <span>Human Practice</span>
-                    </li>
-                </a>
-            </ul>
+            <div id="shell10">
+                <HomeImg
+                    id="bc1"
+                    src="https://2021.igem.org/wiki/images/5/5e/T--NJMU-China--10.1.png"
+                ></HomeImg>
+                <HomeImg
+                    id="gba1"
+                    src="https://2021.igem.org/wiki/images/a/a9/T--NJMU-China--Gut-brain-axis.png"
+                ></HomeImg>
+                <div class="Home_div" id="t19">
+                    In our project, we constructed engineered probiotics
+                    transfected with constructed
+                    plasmids to prevent and treat
+                    autism based on the regulation of the brain-gut axis.
+                </div>
+            </div>
         </section>
         <MyFooter></MyFooter>
     </div>
 </template>
 
-<script lang="ts" setup>import { onMounted } from 'vue'
+<script lang="ts" setup>
 import MyNav from '../components/MyNav.vue'
 import MyFooter from '../components/MyFooter.vue'
-// import { drawCanvas } from '../script/canvas'
-// onMounted(() => {
-//     drawCanvas()
-// })
+import HomeImg from '../components/HomeImg.vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import { onMounted } from 'vue'
+gsap.registerPlugin(ScrollTrigger)
+gsap.defaults({ ease: "none", duration: 2 })
+
+const tl = gsap.timeline()
+onMounted(() => {
+    tl.from("#st1", {
+        x: -100,
+        y: -200,
+        opacity: 0,
+    })
+        .from("#st2", {
+            x: 100,
+            y: -150,
+            opacity: 0,
+        })
+        .from("#st3", {
+            x: 150,
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t1', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t1', {
+            delay: 0.5,
+        })
+        .to('#t1', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#bt1', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t2', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t2', {
+            delay: 0.5,
+        })
+        .to('#t2', {
+            y: 200,
+            opacity: 0,
+        })
+    ScrollTrigger.create({
+        animation: tl,
+        trigger: ".sect1",
+        start: "46.5% center",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl2 = gsap.timeline()
+onMounted(() => {
+    tl2.from('#m1', {
+        y: 200,
+        opacity: 0,
+    })
+        .to('#stbt1', {
+            x: 600,
+            y: -50,
+        })
+        .to('#stbt1', {
+            x: 820,
+            y: 260,
+        })
+        .from('#t3', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t3', {
+            delay: 0.5,
+        })
+        .to('#t3', {
+            y: 200,
+            opacity: 0,
+        })
+        .to('#stbt1', {
+            x: 150,
+            y: 200,
+        })
+        .to('#stbt1', {
+            x: -100,
+            y: 130,
+        })
+        .from('#btch1', {
+            opacity: 0
+        })
+        .from('#t4', {
+            opacity: 0
+        })
+        .from('#t4', {
+            delay: 0.5
+        })
+        .to('#shell1', {
+            opacity: 0,
+            duration: 3
+        })
+        // .to('#shell1', {
+        //     delay: 0.1
+        // })
+        .from('#shell2', {
+            opacity: 0,
+            duration: 3
+        })
+        .from('#t5', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t5', {
+            delay: 0.5,
+        })
+    ScrollTrigger.create({
+        animation: tl2,
+        trigger: ".sect2",
+        start: "46.5% center",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl3 = gsap.timeline()
+onMounted(() => {
+    tl3.from('#eh1', {
+        opacity: 0
+    })
+        .from('#ch1', {
+            opacity: 0,
+            y: 100
+        })
+        .from('#t6', {
+            opacity: 0,
+            y: 100
+        })
+        .from('#t6', {
+            delay: 0.5
+        })
+    ScrollTrigger.create({
+        animation: tl3,
+        trigger: ".sect3",
+        start: "46.5% center",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl4 = gsap.timeline()
+onMounted(() => {
+    tl4.from('#t7', {
+        y: 200,
+        opacity: 0,
+    })
+        .from('#t7', {
+            delay: 0.5,
+        })
+        .to('#t7', {
+            y: 200,
+            opacity: 0,
+        })
+    ScrollTrigger.create({
+        animation: tl4,
+        trigger: ".sect4",
+        start: "46.5% center",
+        end: "+=1000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl5 = gsap.timeline()
+onMounted(() => {
+    tl5
+        // .from('#btch3', {
+        //     opacity: 0
+        // })
+        .from('#t8', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t8', {
+            delay: 0.5,
+        })
+        .to('#t8', {
+            y: 200,
+            opacity: 0,
+        })
+        .to('#shell3', {
+            opacity: 0
+        })
+        .from('#shell4', {
+            opacity: 0
+        })
+        .from('#t9', {
+            y: 200,
+            opacity: 0,
+        })
+        .from('#t9', {
+            delay: 0.5,
+        })
+        .from('#adch1', {
+            opacity: 0
+        })
+        .to('#adch1', {
+            delay: 1
+        })
+        .to('#adch1', {
+            opacity: 0
+        })
+        .from('#adch2', {
+            opacity: 0
+        })
+        .to('#adch2', {
+            delay: 1
+        })
+        .to('#adch2', {
+            delay: 1
+        })
+    ScrollTrigger.create({
+        animation: tl5,
+        trigger: ".sect5",
+        start: "46.5% center",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl6 = gsap.timeline()
+onMounted(() => {
+    tl6.from('#t10', {
+        y: 200,
+        opacity: 0,
+    })
+        .from('#t10', {
+            delay: 1,
+        })
+        .from('#ln1', {
+            opacity: 0
+        })
+        .from('#ln1', {
+            delay: 1,
+        })
+        .to('#shell5', {
+            opacity: 0
+        })
+        .from('#shell6', {
+            delay: 1
+        })
+        .from('#shell6', {
+            opacity: 0
+        })
+        .from('#shell6', {
+            delay: 1
+        })
+        .from('#pp2', {
+            opacity: 0
+        })
+        .from('#pp2', {
+            delay: 1
+        })
+        .from('#pp2', {
+            delay: 1
+        })
+        .to('#ss1', {
+            opacity: 0,
+        })
+        .from('#shell6', {
+            delay: 1
+        })
+        .from('#ss2', {
+            opacity: 0
+        })
+        .from('#ss2', {
+            delay: 1
+        })
+        .from('#pp4', {
+            opacity: 0
+        })
+        .from('#pp4', {
+            delay: 1
+        })
+        .from('#pp4', {
+            delay: 1
+        })
+        .to('#shell6', {
+            opacity: 0
+        })
+        .from('#shell7', {
+            opacity: 0
+        })
+        .from('#shell7', {
+            delay: 1
+        })
+        .from('#pp6', {
+            opacity: 0
+        })
+        .from('#pp6', {
+            delay: 1
+        })
+        .from('#pp6', {
+            delay: 1
+        })
+    ScrollTrigger.create({
+        animation: tl6,
+        trigger: ".sect6",
+        start: "46.5% center",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl7 = gsap.timeline()
+onMounted(() => {
+    tl7.from('#cl1', {
+        opacity: 0
+    })
+        .from('#chs2', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#chs2', {
+            delay: 1
+        })
+        .to('#ss4', {
+            opacity: 0
+        })
+        .to('#ss4', {
+            delay: 1
+        })
+        .from('#ss3', {
+            opacity: 0
+        })
+        .from('#ss3', {
+            delay: 1
+        })
+        .from('#ss5', {
+            opacity: 0
+        })
+        .from('#ss5', {
+            delay: 1
+        })
+    ScrollTrigger.create({
+        animation: tl7,
+        trigger: ".sect7",
+        start: "46.5% center",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl8 = gsap.timeline()
+onMounted(() => {
+    tl8.from('#pr1', {
+        opacity: 0,
+        y: 200
+    })
+        .from('#t15', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#t15', {
+            delay: 1
+        })
+        .to('#t15', {
+            opacity: 0,
+            y: 200
+        })
+        .to('#t15', {
+            delay: 1
+        })
+        .from('#t16', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#t16', {
+            delay: 1
+        })
+        .to('#t16', {
+            opacity: 0,
+            y: 200
+        })
+        .to('#t16', {
+            delay: 1
+        })
+    ScrollTrigger.create({
+        animation: tl8,
+        trigger: ".sect8",
+        start: "46.5% center",
+        end: "+=3000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
+const tl9 = gsap.timeline()
+onMounted(() => {
+    tl9.from('#t17', {
+        opacity: 0,
+        y: 200
+    })
+        .from('#t17', {
+            delay: 1
+        })
+        .to('#btch4', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#t17', {
+            delay: 1
+        })
+        .from('#adch3', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#adch3', {
+            delay: 1
+        })
+        .from('#md1', {
+            opacity: 0,
+        })
+        .to('#md1', {
+            scale: 1.2
+        })
+        .from('#md1', {
+            delay: 1
+        })
+        .from('#t18', {
+            delay: 1
+        })
+        .to('#shell8', {
+            opacity: 0
+        })
+        .to('#shell8', {
+            delay: 1
+        })
+        .from('#shell9', {
+            opacity: 0
+        })
+        .from('#shell9', {
+            delay: 1
+        })
+        .from('#hd1', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#hd1', {
+            delay: 1
+        })
+        .from('#t18', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#t18', {
+            delay: 1
+        })
+        .from('#t18', {
+            delay: 1
+        })
+        .to('#shell9', {
+            opacity: 0
+        })
+        .to('#shell9', {
+            delay: 1
+        })
+        .from('#shell10', {
+            opacity: 0
+        })
+        .from('#shell10', {
+            delay: 1
+        })
+        .from('#bc1', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#bc1', {
+            delay: 1
+        })
+        .to('#bc1', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#bc1', {
+            delay: 1
+        })
+        .from('#gba1', {
+            opacity: 0,
+            y: 200
+        })
+        .from('#gba1', {
+            delay: 1
+        })
+    ScrollTrigger.create({
+        animation: tl9,
+        trigger: ".sect9",
+        start: "46.5% center",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1, // 通常最合适，可以减少或增加该数字以控制钉扎的时间
+    })
+})
 </script>
 
 <style scoped>
@@ -342,204 +816,368 @@ import MyFooter from '../components/MyFooter.vue'
     overflow: hidden;
 }
 .starry_sky {
-    height: 100vh;
+    height: calc(100vh - var(--height));
     width: 100vw;
     object-fit: cover;
 }
-.star {
-    /* cursor: default; */
+.Home_div {
     position: absolute;
-    height: 30vh;
-    top: 35vh;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    left: 0;
 }
-.star_text {
-    position: relative;
-    top: 32vh;
-    pointer-events: none;
-    font-size: 4vh;
-    font-weight: 700;
+.Home_div2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Home_div3 {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .sect {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - var(--height));
+    overflow: hidden;
+    /* height: 100vh; */
 }
-.sect2 {
-    display: grid;
-    grid-template-columns: 11fr 9fr;
+.sect:deep(#st1) {
+    top: 1%;
+    left: 12%;
 }
-.imgBox {
-    position: relative;
+.sect:deep(#st2) {
+    top: 0%;
+    left: 30%;
+    transform: scale(80%);
 }
-.text {
+.sect:deep(#st3) {
+    top: 46%;
+    left: 42%;
+    transform: scale(120%);
+}
+.sect:deep(#bt1) {
+    top: 28.5%;
+    left: 32.8%;
+    transform: scale(180%);
+}
+.sect:deep(#stbt1) {
+    top: 10%;
+    left: 10%;
+    transform: scale(80%);
+}
+.sect:deep(#m1) {
+    top: 30%;
+    left: 70%;
+    transform: scale(300%);
+}
+
+.sect:deep(#btch1) {
+    top: 22%;
+    left: 10%;
+    transform: scale(180%);
+}
+.sect:deep(#btch2) {
+    top: 20%;
+    left: 38%;
+    transform: scale(180%);
+}
+.sect:deep(#chs1) {
+    top: 20%;
+    left: 35%;
+    transform: scale(240%);
+    filter: blur(1px);
+}
+.sect:deep(#bg2) {
+    top: 20%;
+    left: 5%;
+    transform: scale(240%);
+}
+.sect:deep(#eh1) {
+    top: 53%;
+    left: -8%;
+    transform: scale(320%);
+}
+.sect:deep(#ch1) {
+    top: 5%;
+    left: 37%;
+    transform: scale(200%);
+}
+.sect:deep(#bg3) {
+    height: calc(100vh - var(--height));
+    width: 100vw;
+    object-fit: cover;
+}
+.sect:deep(#btch3) {
+    top: 22%;
+    left: 10%;
+    transform: scale(180%);
+}
+.sect:deep(#adch1) {
+    top: 22%;
+    left: 50%;
+    transform: scale(180%);
+}
+.sect:deep(#adch2) {
+    top: 20%;
+    left: 53%;
+    transform: scale(210%);
+}
+.sect:deep(#ln1),
+.sect:deep(#co1) {
+    top: 28%;
+    left: 16%;
+    transform: scale(210%);
+}
+.sect:deep(#pp1),
+.sect:deep(#pp2) {
+    top: 15%;
+    left: 25%;
+    transform: scale(190%);
+}
+.sect:deep(#pp2) {
+    left: 32.275%;
+}
+.sect:deep(#pp3),
+.sect:deep(#pp4) {
+    top: 15%;
+    left: 30%;
+    transform: scale(190%);
+}
+.sect:deep(#pp4) {
+    left: 31.85%;
+}
+.sect:deep(#pp5),
+.sect:deep(#pp6) {
+    top: 21%;
+    left: 29%;
+    transform: scale(190%);
+}
+.sect:deep(#cl1) {
+    top: 24%;
+    left: 16%;
+    transform: scale(190%);
+}
+.sect:deep(#chs2) {
+    top: 24%;
+    left: 29%;
+    transform: scale(190%);
+}
+.sect:deep(#chs3) {
+    top: 31%;
+    left: 29%;
+    transform: scale(190%);
+}
+.sect:deep(#ads1000) {
+    top: 31%;
+    left: 50%;
+    transform: scale(190%);
+}
+.sect:deep(#pr1) {
+    top: 20%;
+    left: 12%;
+    transform: scale(135%);
+}
+.sect:deep(#ig1) {
+    top: 13%;
+    left: 72%;
+    transform: scale(140%);
+}
+.sect:deep(#nj1) {
+    top: 0%;
+    left: 80%;
+    transform: scale(55%);
+}
+.sect:deep(#btch4) {
+    top: 20%;
+    left: 10%;
+    transform: scale(190%);
+}
+.sect:deep(#adch3) {
+    top: 10%;
+    left: 10%;
+    transform: scale(190%);
+}
+.sect:deep(#md1) {
+    top: 20%;
+    left: 10%;
+    transform: scale(90%);
+}
+.sect:deep(#hd1) {
+    top: 20%;
+    left: 15%;
+    transform: scale(210%);
+}
+.sect:deep(#btch5) {
+    top: 20%;
+    left: 13%;
+    transform: scale(210%);
+}
+.sect:deep(#bc1) {
+    top: 22%;
+    left: 18%;
+    transform: scale(220%);
+}
+.sect:deep(#gba1) {
+    top: 22%;
+    left: 18%;
+    transform: scale(220%);
+}
+#t1 {
+    color: white;
+    max-width: 100vw;
     text-align: left;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1);
 }
-.textBox {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* font-size: 1.5rem; */
-    font-size: 3.5vh;
-    padding: 4vw;
-    line-height: 1.5;
-    font-family: "Microsoft Yahei";
-    cursor: default;
-    /* transition: all 0.3s ease; */
+#t2 {
+    color: white;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1) calc(var(--height) * 4);
 }
-.textBox2 {
-    padding-bottom: 0;
+#t3 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1);
+    padding-right: calc(var(--height) * 10);
 }
-.sect3 {
-    display: grid;
-    grid-template-columns: 2fr 5fr 3fr;
-    grid-template-rows: 3fr 7fr;
+#t4 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1) calc(var(--height) * 10);
 }
-.sect3 .img2 {
-    background-size: 200%;
-    background-position: -29vw 0px;
-    background-repeat: no-repeat;
+#t5 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1) calc(var(--height) * 4);
 }
-.sect3 .img3 {
-    background-size: 90%;
-    background-position: -6vw bottom;
-    background-repeat: no-repeat;
+#t6 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1) calc(var(--height) * 1);
+    padding-left: calc(var(--height) * 21);
 }
-.sect4 {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
+#t7 {
+    color: white;
+    max-width: 100vw;
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(var(--height) * 1.8);
 }
-.sect4 .img1,
-.sect4 .img2 {
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
+#t8 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    top: 20%;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1) calc(var(--height) * 4);
+    padding-left: calc(var(--height) * 15);
 }
-.textBox3 {
-    padding: 0 8vw 4vw 8vw;
+#t9 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    top: 2%;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 0.8) 0;
+    padding-right: calc(var(--height) * 19);
+    padding-left: calc(var(--height) * 2);
 }
-.sect5 {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
+#t10 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    top: 20%;
+    font-size: calc(var(--height) * 0.8);
+    padding: calc(var(--height) * 1) calc(var(--height) * 2);
+    padding-left: calc(var(--height) * 18);
 }
-.sect5 .img1 {
-    background-size: 90%;
-    background-position: 3vw center;
-    background-repeat: no-repeat;
+#t11 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 1);
 }
-.sect6 {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
+#t12 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 1);
+    padding-left: calc(var(--height) * 5);
 }
-.sect6 .img1 {
-    background-size: 90%;
-    background-position: center -3vw;
-    background-repeat: no-repeat;
+#t13 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 1);
+    padding-left: calc(var(--height) * 8);
 }
-.sect8 {
-    display: grid;
-    grid-template-columns: 3fr 7fr;
+#t14 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 1);
+    padding-left: calc(var(--height) * 8);
+    padding-right: calc(var(--height) * 12);
 }
-.sect8 .img1 {
-    background-size: 90%;
-    background-position: center -3vw;
-    background-repeat: no-repeat;
+#t15 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 2);
+    padding-left: calc(var(--height) * 22);
+    padding-right: calc(var(--height) * 1);
 }
-.sect8 {
-    display: grid;
-    grid-template-columns: 3fr 7fr;
+#t16 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 2);
+    padding-left: calc(var(--height) * 22);
+    padding-right: calc(var(--height) * 1);
 }
-.sect8 .img1 {
-    background-size: 90%;
-    background-position: center -3vw;
-    background-repeat: no-repeat;
+#t17 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 2.5);
+    padding-left: calc(var(--height) * 16);
+    padding-right: calc(var(--height) * 4);
 }
-.sect9 {
-    display: grid;
-    grid-template-columns: 14fr 3fr 3fr;
-    grid-template-rows: 5fr 12fr 18fr 5fr;
+#t18 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
+    padding: calc(var(--height) * 6);
+    padding-left: calc(var(--height) * 18);
+    padding-right: calc(var(--height) * 3);
 }
-.sect9 .img1 {
-    background-size: 90% 110%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.sect9 .img2,
-.sect9 .img3 {
-    background-size: 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.textBox4 {
-    padding: 0 2vw;
-    font-size: 3vh;
-    padding-bottom: 3vw;
-}
-.sect10 {
-    display: grid;
-    grid-template-columns: 48fr 52fr;
-}
-.textBox5 {
-    padding: 4vw 6vw;
-}
-.sect11 {
-    display: grid;
-    grid-template-columns: 7fr 6fr 7fr;
-    grid-template-rows: 4fr 6fr;
-}
-.textBox6 {
-    font-size: 3vh;
-}
-.sect11 .img1,
-.sect11 .img2 {
-    background-size: 120%;
-    background-position: center 6vw;
-    background-repeat: no-repeat;
-}
-.sect12 {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
-}
-.sect12 .img1 {
-    background-size: 30%;
-    background-position: center -10vw;
-    background-repeat: no-repeat;
-}
-.sect12 .img2 {
-    background-size: 70%;
-    background-position: center 6vw;
-    background-repeat: no-repeat;
-}
-.textBox7 {
-    padding: 0 10vw 4vw 10vw;
-    font-size: 3vh;
-}
-#myCanvas,
-#myCanvas1,
-#myCanvas2,
-#myCanvas3,
-#myCanvas4,
-#myCanvas5 {
-    z-index: 10;
-}
-.sect13 {
+#t19 {
+    color: black;
+    max-width: 100vw;
+    text-align: left;
+    font-size: calc(var(--height) * 0.7);
     padding: calc(var(--height) * 4);
-}
-.list {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.list a {
-    height: 100%;
-    display: grid;
-    place-items: center left;
-}
-.list li {
-    white-space: nowrap;
-    color: #0f354ef3;
-    font-weight: 700;
-    font-size: calc(0.8 * var(--height));
+    padding-left: calc(var(--height) * 16);
+    padding-right: calc(var(--height) * 3);
 }
 </style>
